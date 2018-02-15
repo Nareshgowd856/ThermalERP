@@ -1,0 +1,284 @@
+﻿
+@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/_AdminLayoutPage.cshtml";
+}
+<html>
+<head>
+    <style>
+        div.gallery {
+            margin: 30px;
+            border: 5px solid #ccc;
+            float: left;
+            width: 150px;
+           
+            border-radius:25px;
+        }
+
+            div.gallery:hover {
+                border: 1px solid #777;
+            }
+
+            div.gallery img {
+                width: 80%;
+                height: auto;
+                margin-left:auto;
+                margin-right:auto;
+
+            }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="col-md-12">
+   
+        <div class="gallery">
+
+            <a href="@Url.Action("Home","Admin")">
+                <img src="~/Icons/1.png" height="3000" ,width="300" />
+            </a>
+            <div class="desc">Admin</div>
+        </div>
+
+
+        <div class="gallery">
+
+            <a href="@Url.Action("Home","Admin")">
+                <img src="~/Icons/eng.png" height="300" ,width="200" />
+            </a>
+            <div class="desc">Engineering</div>
+
+        </div>
+        <div class="gallery">
+            <a href="@Url.Action("Home","Admin")">
+                <img src="~/Icons/marketing.png" height="300" ,width="200" />
+            </a>
+            <div class="desc">Marketing</div>
+        </div>
+
+        <div class="gallery">
+            <a href="@Url.Action("Home","Admin")">
+                <img src="~/Icons/Proposal.jpg" height="300" ,width="200" />
+            </a>
+            <div class="desc">Proposal</div>
+        </div>
+    </div>
+    <div>
+        <div class="gallery">
+
+            <a href="@Url.Action("Home","Admin")">
+                <img src="~/Icons/maintainance.png" height="300" ,width="200" />
+               
+            </a>
+            <div class="desc">Admin</div>
+        </div>
+
+
+        <div class="gallery">
+
+            <a href="@Url.Action("Home","Admin")">
+                <img src="~/Icons/manufacture.png"  height="300" ,width="200" />
+               
+            </a>
+            <div class="desc">Engineering</div>
+
+        </div>
+        <div class="gallery">
+            <a href="@Url.Action("Admin","Home")">
+                <img src="~/Icons/marketing.png" height="300" ,width="200" />
+            </a>
+            <div class="desc">Marketing</div>
+        </div>
+
+        <div class="gallery">
+            <a href="@Url.Action("Home","Admin")">
+                <img src="~/Icons/Proposal.jpg" height="300" ,width="200" />
+            </a>
+            <div class="desc">Proposal</div>
+        </div>
+    </div>
+</body>
+</html>
+
+@*<html>
+    <head>
+        <title>View</title>
+        @*<link href="~/Content/Style.css/style.css" rel="stylesheet" />*@
+@*</head>
+    <body >
+        <div id="page-content-wrapper">
+            <div>
+                <a href="@Url.Action("Home","Admin")">
+                    <img src="~/Icons/1.png" height="100px" ,width="10px" />
+                </a>
+            </div>
+            <div>
+                <a href="@Url.Action("Home","Admin")">
+                    <img src="~/Icons/eng.png" height="100px",width="10px"/>
+                    </a>
+            </div>
+        </div>
+    </body>*@
+@*</html>*@
+@*<!DOCTYPE html>*@
+@*<style>
+        body {
+            width: 100%;
+            height: 2000px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .border {
+            position: fixed;
+            top: 0;
+            left: 0;
+            border: 12px solid #000;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin-left: 4px;
+        }
+    </style>*@
+@*<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>View</title>
+
+    </head>
+    <body>
+        <div class="border">
+
+            <div class="row">
+
+                <div class="border-left-2" style="text-align:center">
+                    <div class="col-xs-6 col-md-2">
+                        <a href="@Url.Action("Home","Admin")">
+                            <img src="~/Icons/1.png" style="float: left; width: 10%; margin-right: 15%; margin-bottom: 0.5em; margin-top:1em; border:double;border-top-left-radius:4px" />
+
+                        </a>
+
+
+                    </div>
+
+
+                    <div class="col-xs-6 col-md-2 ">
+                        <a href="@Url.Action("Home","Admin")">
+                            <img src="~/Icons/marketing.png" style="float: left; width: 10%; margin-right: 15%; margin-bottom: 0.5em; margin-top:1em;border:double ;border-top-left-radius:4px" />
+
+                        </a>
+
+
+                    </div>
+                    <div class="col-xs-6 col-md-2 ">
+                        <a href="@Url.Action("Home","Admin")">
+                            <img src="~/Icons/Proposal.jpg" style="float: left; width: 10%; margin-right: 15%; margin-bottom: 0.5em; margin-top:1em; border:double;border-top-left-radius:4px" />
+
+                        </a>
+
+                    </div>
+
+                    <div class="col-xs-6 col-md-2 ">
+                        <a href="@Url.Action("Home","Admin")">
+
+                            <img src="~/Icons/eng.png" style="float: left; width: 10%; margin-right: 15%; margin-bottom: 0.5em; margin-top:1em;border:double;border-top-left-radius:4px" />
+
+                        </a>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>*@
+@*<div class="row">
+    <div>
+        <div class="col-xs-6 col-md-2 ">
+            <a href="@Url.Action("Home","Admin")">
+
+                <img src="~/Icons/eng.png" style="float: left; width: 15%; margin-right: 7%; margin-bottom: 0.5em;" />
+            </a>
+        </div>
+        <div class="col-xs-6 col-md-2 ">
+            <a href="@Url.Action("Home","Admin")">
+                <img src="~/Icons/Proposal.jpg"  style="float: left; width: 15%; margin-right: 7%; margin-bottom: 0.5em;" />
+            </a>
+
+        </div>
+
+        <div class="col-xs-6 col-md-2 ">
+            <a href="@Url.Action("Home","Admin")">
+                <img src="~/Icons/marketing.png"  style="float: left; width: 15%; margin-right: 7%; margin-bottom: 0.5em;" />
+            </a>
+
+        </div>
+        <div class="col-xs-6 col-md-2">
+            <a href="@Url.Action("Home","Admin")">
+                <img src="~/Icons/marketing.png" style="float: left; width: 15%; margin-right: 7%; margin-bottom: 0.5em;" />
+            </a>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-xs-6 col-md-2 ">
+            <a href="@Url.Action("Home","Admin")">
+                <img src="~/Icons/marketing.png"  style="float: left; width: 15%; margin-right: 7%; margin-bottom: 0.5em;" />
+            </a>
+
+        </div>
+        <div class="col-xs-6 col-md-2 ">
+            <a href="@Url.Action("Home","Admin")">
+                <img src="~/Icons/marketing.png"  style="float: left; width: 15%; margin-right: %; margin-bottom: 0.5em;"/>
+            </a>
+
+        </div>
+        <div class="col-xs-6 col-md-2">
+            <a href="@Url.Action("Home","Admin")">
+                <img src="~/Icons/Proposal.jpg"  style="float: left; width: 15%; margin-right: 7%; margin-bottom: 0.5em;" />
+            </a>
+
+        </div>
+        <div class="col-xs-6 col-md-2">
+            <a href="@Url.Action("Home","Admin")">
+                <img src="~/Icons/marketing.png" style="float: left; width: 15%; margin-right: 7%; margin-bottom: 0.5em;" />
+            </a>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-xs-6 col-md-2">
+            <a href="@Url.Action("Home","Admin")">
+                <img src="~/Icons/marketing.png"  style="float: left; width: 15%; margin-right: 7%; margin-bottom: 0.5em;" />
+            </a>
+
+        </div>
+
+        <div class="col-xs-6 col-md-2">
+            <a href="@Url.Action("Home","Admin")">
+                <img src="~/Icons/Proposal.jpg" style="float: left; width: 15%; margin-right: 7%; margin-bottom: 0.5em;" />
+            </a>
+
+        </div>
+        <div class="col-xs-6 col-md-2">
+            <a href="@Url.Action("Home","Admin")">
+                <img src="~/Icons/marketing.png"  style="float: left; width: 15%; margin-right: 7%; margin-bottom: 0.5em;" />
+            </a>
+
+        </div>
+        <div class="col-xs-6 col-md-2 ">
+            <a href="@Url.Action("Home","Admin")">
+                <img src="~/Icons/marketing.png" style="float: left; width: 15%; margin-right: 7%; margin-bottom: 0.5em;" />
+            </a>
+        </div>
+        </div>
+    </div>*@
+@*</body>
+    </html>*@
+

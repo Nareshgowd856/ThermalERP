@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Thermal_PMSModelStoreContainer" CdmEntityContainer="Thermal_PMSEntities">
+    <EntitySetMapping Name="Activity_Child">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.Activity_Child">
+        <MappingFragment StoreEntitySet="Activity_Child">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Activity_Code" ColumnName="Activity_Code" />
+          <ScalarProperty Name="Activity_Res_Id" ColumnName="Activity_Res_Id" />
+          <ScalarProperty Name="Act_Res_Skill_Level" ColumnName="Act_Res_Skill_Level" />
+          <ScalarProperty Name="Act_Noof_Res" ColumnName="Act_Noof_Res" />
+          <ScalarProperty Name="Act_Res_Cost" ColumnName="Act_Res_Cost" />
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+          <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Activity_Master">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.Activity_Master">
+        <MappingFragment StoreEntitySet="Activity_Master">
+          <ScalarProperty Name="Activity_Code" ColumnName="Activity_Code" />
+          <ScalarProperty Name="Activity_Description" ColumnName="Activity_Description" />
+          <ScalarProperty Name="Activity_Group" ColumnName="Activity_Group" />
+          <ScalarProperty Name="Activity_Document" ColumnName="Activity_Document" />
+          <ScalarProperty Name="Activity_Type" ColumnName="Activity_Type" />
+          <ScalarProperty Name="Activity_Predessor" ColumnName="Activity_Predessor" />
+          <ScalarProperty Name="Activity_Exe_Time" ColumnName="Activity_Exe_Time" />
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Modified_on" ColumnName="Modified_on" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APG_Master">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.APG_Master">
+        <MappingFragment StoreEntitySet="APG_Master">
+          <ScalarProperty Name="APG_No" ColumnName="APG_No" />
+          <ScalarProperty Name="APG_Description" ColumnName="APG_Description" />
+          <ScalarProperty Name="APG_ApplicableTo" ColumnName="APG_ApplicableTo" />
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customer_Master">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.Customer_Master">
+        <MappingFragment StoreEntitySet="Customer_Master">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Customer_Id" ColumnName="Customer_Id" />
+          <ScalarProperty Name="Customer_Name" ColumnName="Customer_Name" />
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Group_Master">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.Group_Master">
+        <MappingFragment StoreEntitySet="Group_Master">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Group_Id" ColumnName="Group_Id" />
+          <ScalarProperty Name="Group_Name" ColumnName="Group_Name" />
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Item_RM_Codes">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.Item_RM_Codes">
+        <MappingFragment StoreEntitySet="Item_RM_Codes">
+          <ScalarProperty Name="Item_Spec" ColumnName="Item_Spec" />
+          <ScalarProperty Name="Item_Dia" ColumnName="Item_Dia" />
+          <ScalarProperty Name="Item_WT" ColumnName="Item_WT" />
+          <ScalarProperty Name="Item_SchNo" ColumnName="Item_SchNo" />
+          <ScalarProperty Name="Item_UWt" ColumnName="Item_UWt" />
+          <ScalarProperty Name="Item_Description" ColumnName="Item_Description" />
+          <ScalarProperty Name="Item_Code" ColumnName="Item_Code" />
+          <ScalarProperty Name="Item_LongText" ColumnName="Item_LongText" />
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Part_List_No" ColumnName="Part_List_No" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Item_RM_Master">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.Item_RM_Master">
+        <MappingFragment StoreEntitySet="Item_RM_Master">
+          <ScalarProperty Name="Item_Type" ColumnName="Item_Type" />
+          <ScalarProperty Name="Item_Group" ColumnName="Item_Group" />
+          <ScalarProperty Name="Item_Pur_UOM" ColumnName="Item_Pur_UOM" />
+          <ScalarProperty Name="Item_Iss_UOM" ColumnName="Item_Iss_UOM" />
+          <ScalarProperty Name="Item_Spec" ColumnName="Item_Spec" />
+          <ScalarProperty Name="Item_PTS" ColumnName="Item_PTS" />
+          <ScalarProperty Name="Item_BOM_Req" ColumnName="Item_BOM_Req" />
+          <ScalarProperty Name="Item_Critical_Item" ColumnName="Item_Critical_Item" />
+          <ScalarProperty Name="Item_ShelfLife" ColumnName="Item_ShelfLife" />
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Maker_Master">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.Maker_Master">
+        <MappingFragment StoreEntitySet="Maker_Master">
+          <ScalarProperty Name="Maker_No" ColumnName="Maker_No" />
+          <ScalarProperty Name="Maker_Description" ColumnName="Maker_Description" />
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Material_Grades">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.Material_Grades">
+        <MappingFragment StoreEntitySet="Material_Grades">
+          <ScalarProperty Name="Material_Group" ColumnName="Material_Group" />
+          <ScalarProperty Name="Material_Grad" ColumnName="Material_Grad" />
+          <ScalarProperty Name="Material_Color" ColumnName="Material_Color" />
+          <ScalarProperty Name="Material_Density" ColumnName="Material_Density" />
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+          <ScalarProperty Name="Spec_Code" ColumnName="Spec_Code" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Part_List">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.Part_List">
+        <MappingFragment StoreEntitySet="Part_List">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Part_List_No" ColumnName="Part_List_No" />
+          <ScalarProperty Name="Part_List_Name" ColumnName="Part_List_Name" />
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+          <ScalarProperty Name="Modified_by" ColumnName="Modified_by" />
+          <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Part_List_Item">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.Part_List_Item">
+        <MappingFragment StoreEntitySet="Part_List_Item">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Project_Code" ColumnName="Project_Code" />
+          <ScalarProperty Name="Maker_No" ColumnName="Maker_No" />
+          <ScalarProperty Name="Apg_No" ColumnName="Apg_No" />
+          <ScalarProperty Name="Apg_Name" ColumnName="Apg_Name" />
+          <ScalarProperty Name="Partlist_No" ColumnName="Partlist_No" />
+          <ScalarProperty Name="Part_Group" ColumnName="Part_Group" />
+          <ScalarProperty Name="Part_Sl_No" ColumnName="Part_Sl_No" />
+          <ScalarProperty Name="Part_Name" ColumnName="Part_Name" />
+          <ScalarProperty Name="Part_Desription" ColumnName="Part_Desription" />
+          <ScalarProperty Name="Part_variant" ColumnName="Part_variant" />
+          <ScalarProperty Name="Part_UOM" ColumnName="Part_UOM" />
+          <ScalarProperty Name="Part_Spec_Id" ColumnName="Part_Spec_Id" />
+          <ScalarProperty Name="Part_Rm_Type" ColumnName="Part_Rm_Type" />
+          <ScalarProperty Name="Part_Rm_WThick" ColumnName="Part_Rm_WThick" />
+          <ScalarProperty Name="Part_Rm_Density" ColumnName="Part_Rm_Density" />
+          <ScalarProperty Name="Part_Mtc_Cert" ColumnName="Part_Mtc_Cert" />
+          <ScalarProperty Name="Part_IBR_Cert" ColumnName="Part_IBR_Cert" />
+          <ScalarProperty Name="Part_EN_Cert" ColumnName="Part_EN_Cert" />
+          <ScalarProperty Name="Part_RM_Code" ColumnName="Part_RM_Code" />
+          <ScalarProperty Name="Part_Dia" ColumnName="Part_Dia" />
+          <ScalarProperty Name="Part_Wt" ColumnName="Part_Wt" />
+          <ScalarProperty Name="Part_Length" ColumnName="Part_Length" />
+          <ScalarProperty Name="Part_W2" ColumnName="Part_W2" />
+          <ScalarProperty Name="Part_Fg_wt" ColumnName="Part_Fg_wt" />
+          <ScalarProperty Name="Part_Rm_Wt" ColumnName="Part_Rm_Wt" />
+          <ScalarProperty Name="Part_D_Wt" ColumnName="Part_D_Wt" />
+          <ScalarProperty Name="Part_Engg_Code" ColumnName="Part_Engg_Code" />
+          <ScalarProperty Name="CompId" ColumnName="CompId" />
+          <ScalarProperty Name="Version_No" ColumnName="Version_No" />
+          <ScalarProperty Name="Version_Date" ColumnName="Version_Date" />
+          <ScalarProperty Name="Version_Change" ColumnName="Version_Change" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Creted_By" ColumnName="Creted_By" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="OD" ColumnName="OD" />
+          <ScalarProperty Name="Part_Equipment_Name" ColumnName="Part_Equipment_Name" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Drawing_NO" ColumnName="Drawing_NO" />
+          <ScalarProperty Name="PTS_NO" ColumnName="PTS_NO" />
+          <ScalarProperty Name="Main_Drwaing_No" ColumnName="Main_Drwaing_No" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Project_ActivityChart">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.Project_ActivityChart">
+        <MappingFragment StoreEntitySet="Project_ActivityChart">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Project_Code" ColumnName="Project_Code" />
+          <ScalarProperty Name="Activity_Code" ColumnName="Activity_Code" />
+          <ScalarProperty Name="Activity_Description" ColumnName="Activity_Description" />
+          <ScalarProperty Name="Work_Center" ColumnName="Work_Center" />
+          <ScalarProperty Name="Person_Rep" ColumnName="Person_Rep" />
+          <ScalarProperty Name="Planned_StartDate" ColumnName="Planned_StartDate" />
+          <ScalarProperty Name="Planned_CompletionDate" ColumnName="Planned_CompletionDate" />
+          <ScalarProperty Name="Actual_StartDate" ColumnName="Actual_StartDate" />
+          <ScalarProperty Name="Actual_Completiondate" ColumnName="Actual_Completiondate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+          <ScalarProperty Name="Maker_No" ColumnName="Maker_No" />
+          <ScalarProperty Name="Partlist_No" ColumnName="Partlist_No" />
+          <ScalarProperty Name="Apg_No" ColumnName="Apg_No" />
+          <ScalarProperty Name="Apg_Name" ColumnName="Apg_Name" />
+          <ScalarProperty Name="Part_Engg_Code" ColumnName="Part_Engg_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Project_Commercial_Data">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.Project_Commercial_Data">
+        <MappingFragment StoreEntitySet="Project_Commercial_Data">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Project_Code" ColumnName="Project_Code" />
+          <ScalarProperty Name="Project_Clasificaton" ColumnName="Project_Clasificaton" />
+          <ScalarProperty Name="Project_Sector" ColumnName="Project_Sector" />
+          <ScalarProperty Name="Project_Currency" ColumnName="Project_Currency" />
+          <ScalarProperty Name="LDfor_Delyed_Deliveryfor_Equp" ColumnName="LDfor_Delyed_Deliveryfor_Equp" />
+          <ScalarProperty Name="LDfor_Delyed_Deliveryfor_Draw" ColumnName="LDfor_Delyed_Deliveryfor_Draw" />
+          <ScalarProperty Name="Mile_Stone" ColumnName="Mile_Stone" />
+          <ScalarProperty Name="Per_Payments" ColumnName="Per_Payments" />
+          <ScalarProperty Name="TriggeringPoint" ColumnName="TriggeringPoint" />
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Project_Master">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.Project_Master">
+        <MappingFragment StoreEntitySet="Project_Master">
+          <ScalarProperty Name="Project_Code" ColumnName="Project_Code" />
+          <ScalarProperty Name="Project_Name" ColumnName="Project_Name" />
+          <ScalarProperty Name="Project_Client" ColumnName="Project_Client" />
+          <ScalarProperty Name="Project_DeliveryDate" ColumnName="Project_DeliveryDate" />
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+          <ScalarProperty Name="Project_Description" ColumnName="Project_Description" />
+          <ScalarProperty Name="Project_Equp_Name" ColumnName="Project_Equp_Name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Maker_No" ColumnName="Maker_No" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Project_Master_Child">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.Project_Master_Child">
+        <MappingFragment StoreEntitySet="Project_Master_Child">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Project_Code" ColumnName="Project_Code" />
+          <ScalarProperty Name="Project_Equp_Name" ColumnName="Project_Equp_Name" />
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+          <ScalarProperty Name="Maker_No" ColumnName="Maker_No" />
+          <ScalarProperty Name="APG_No" ColumnName="APG_No" />
+          <ScalarProperty Name="APG_Name" ColumnName="APG_Name" />
+          <ScalarProperty Name="Full_Project_Code" ColumnName="Full_Project_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Project_Structure">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.Project_Structure">
+        <MappingFragment StoreEntitySet="Project_Structure">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Project_Code" ColumnName="Project_Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+          <ScalarProperty Name="Main" ColumnName="Main" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Project_Structure_Main">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.Project_Structure_Main">
+        <MappingFragment StoreEntitySet="Project_Structure_Main">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Project_Code" ColumnName="Project_Code" />
+          <ScalarProperty Name="Maker_No" ColumnName="Maker_No" />
+          <ScalarProperty Name="Maker_Name" ColumnName="Maker_Name" />
+          <ScalarProperty Name="APG_No" ColumnName="APG_No" />
+          <ScalarProperty Name="APG_Name" ColumnName="APG_Name" />
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+          <ScalarProperty Name="Full_Project_Code" ColumnName="Full_Project_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Project_Technical_Data">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.Project_Technical_Data">
+        <MappingFragment StoreEntitySet="Project_Technical_Data">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Project_Code" ColumnName="Project_Code" />
+          <ScalarProperty Name="Special_Mtrl_Requ_Chk" ColumnName="Special_Mtrl_Requ_Chk" />
+          <ScalarProperty Name="Special_Mtrl_Requ" ColumnName="Special_Mtrl_Requ" />
+          <ScalarProperty Name="Warranty_Period" ColumnName="Warranty_Period" />
+          <ScalarProperty Name="CE_Marking" ColumnName="CE_Marking" />
+          <ScalarProperty Name="Insp_TPIA" ColumnName="Insp_TPIA" />
+          <ScalarProperty Name="ASME_Code" ColumnName="ASME_Code" />
+          <ScalarProperty Name="National_Board_Reg" ColumnName="National_Board_Reg" />
+          <ScalarProperty Name="InspectonBy_CIB" ColumnName="InspectonBy_CIB" />
+          <ScalarProperty Name="Comp_With_Loc_Reg" ColumnName="Comp_With_Loc_Reg" />
+          <ScalarProperty Name="Comp_With_Doc_To_Gost" ColumnName="Comp_With_Doc_To_Gost" />
+          <ScalarProperty Name="QAP_Approve" ColumnName="QAP_Approve" />
+          <ScalarProperty Name="Insp_by_Auth_Insp" ColumnName="Insp_by_Auth_Insp" />
+          <ScalarProperty Name="Insp_by_Accep_Client" ColumnName="Insp_by_Accep_Client" />
+          <ScalarProperty Name="Concession_Requeist_Client" ColumnName="Concession_Requeist_Client" />
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+          <ScalarProperty Name="ProjectCodeConstruction" ColumnName="ProjectCodeConstruction" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Project_Technical_Data_Child">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.Project_Technical_Data_Child">
+        <MappingFragment StoreEntitySet="Project_Technical_Data_Child">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Project_Code" ColumnName="Project_Code" />
+          <ScalarProperty Name="Mile_Stone" ColumnName="Mile_Stone" />
+          <ScalarProperty Name="Per_Payments" ColumnName="Per_Payments" />
+          <ScalarProperty Name="TriggeringPoint" ColumnName="TriggeringPoint" />
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+          <ScalarProperty Name="Modigied_By" ColumnName="Modigied_By" />
+          <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Project_Version_History">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.Project_Version_History">
+        <MappingFragment StoreEntitySet="Project_Version_History">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Project_Code" ColumnName="Project_Code" />
+          <ScalarProperty Name="Version_No" ColumnName="Version_No" />
+          <ScalarProperty Name="Version_Date" ColumnName="Version_Date" />
+          <ScalarProperty Name="Version_Change" ColumnName="Version_Change" />
+          <ScalarProperty Name="DCN_No" ColumnName="DCN_No" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Reviewed_By" ColumnName="Reviewed_By" />
+          <ScalarProperty Name="Approved_By" ColumnName="Approved_By" />
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.Role">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubAssembly_Master">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.SubAssembly_Master">
+        <MappingFragment StoreEntitySet="SubAssembly_Master">
+          <ScalarProperty Name="Sub_Assembly_ID" ColumnName="Sub_Assembly_ID" />
+          <ScalarProperty Name="Sub_Assembly_Name" ColumnName="Sub_Assembly_Name" />
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tables">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.Table">
+        <MappingFragment StoreEntitySet="Table">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="CompId" ColumnName="CompId" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Temptables">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.Temptable">
+        <MappingFragment StoreEntitySet="Temptable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Maker_No" ColumnName="Maker_No" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+          <ScalarProperty Name="Project_Code" ColumnName="Project_Code" />
+          <ScalarProperty Name="no" ColumnName="no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UOM_Master">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.UOM_Master">
+        <MappingFragment StoreEntitySet="UOM_Master">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="UOM_Id" ColumnName="UOM_Id" />
+          <ScalarProperty Name="UOM_Name" ColumnName="UOM_Name" />
+          <ScalarProperty Name="CompId" ColumnName="CompId" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="AppUserName" ColumnName="AppUserName" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Login">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.User_Login">
+        <MappingFragment StoreEntitySet="User_Login">
+          <ScalarProperty Name="LoginId" ColumnName="LoginId" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsersInRoles">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.UsersInRole">
+        <MappingFragment StoreEntitySet="UsersInRole">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="roleName" ColumnName="roleName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="createdbyid" ColumnName="createdbyid" />
+          <ScalarProperty Name="createdbyname" ColumnName="createdbyname" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Variant_Master">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.Variant_Master">
+        <MappingFragment StoreEntitySet="Variant_Master">
+          <ScalarProperty Name="Variant_ID" ColumnName="Variant_ID" />
+          <ScalarProperty Name="Variant_Name" ColumnName="Variant_Name" />
+          <ScalarProperty Name="Sub_Assembly_Name" ColumnName="Sub_Assembly_Name" />
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Modifed_On" ColumnName="Modifed_On" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkCenters">
+      <EntityTypeMapping TypeName="Thermal_PMSModel.WorkCenter">
+        <MappingFragment StoreEntitySet="WorkCenter">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Work_Center_id" ColumnName="Work_Center_id" />
+          <ScalarProperty Name="Work_Center" ColumnName="Work_Center" />
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="modified_On" ColumnName="modified_On" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

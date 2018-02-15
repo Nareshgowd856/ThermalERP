@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Thermal_PMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Activity_Child">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Activity_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Activity_Res_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Act_Res_Skill_Level" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Act_Noof_Res" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Act_Res_Cost" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_On" Type="DateTime" Precision="3" />
+    <Property Name="Modified_On" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_By" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Activity_Master">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Activity_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Activity_Description" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Activity_Group" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Activity_Document" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Activity_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Activity_Predessor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Activity_Exe_Time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_On" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_on" Type="DateTime" Precision="3" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="APG_Master">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="APG_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="APG_Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="APG_ApplicableTo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_On" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_On" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Customer_Master">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Customer_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Customer_Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_On" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_On" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Group_Master">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Group_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Group_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_By" Type="DateTime" Precision="3" />
+    <Property Name="Modified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_By" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Item_RM_Codes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Item_Spec" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Item_Dia" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Item_WT" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="Item_SchNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Item_UWt" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="Item_Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Item_Code" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Item_LongText" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Part_List_No" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Item_RM_Master">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Item_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Item_Group" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Item_Pur_UOM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Item_Iss_UOM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Item_Spec" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Item_PTS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Item_BOM_Req" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Item_Critical_Item" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Item_ShelfLife" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Maker_Master">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Maker_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Maker_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Material_Grades">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Material_Group" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Material_Grad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Material_Color" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Material_Density" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Spec_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Part_List">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Part_List_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Part_List_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_On" Type="DateTime" Precision="3" />
+    <Property Name="Modified_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_On" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Part_List_Item">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Project_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Maker_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Apg_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Apg_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Partlist_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Part_Group" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Part_Sl_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Part_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Part_Desription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Part_variant" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Part_UOM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Part_Spec_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Part_Rm_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Part_Rm_WThick" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="Part_Rm_Density" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="Part_Mtc_Cert" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Part_IBR_Cert" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Part_EN_Cert" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Part_RM_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Part_Dia" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="Part_Wt" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="Part_Length" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="Part_W2" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="Part_Fg_wt" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="Part_Rm_Wt" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="Part_D_Wt" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="Part_Engg_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Version_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Version_Date" Type="DateTime" Precision="3" />
+    <Property Name="Version_Change" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Created" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Creted_By" Type="DateTime" Precision="3" />
+    <Property Name="Modified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_By" Type="DateTime" Precision="3" />
+    <Property Name="Qty" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="OD" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="Part_Equipment_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Drawing_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PTS_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Main_Drwaing_No" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Project_ActivityChart">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Project_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Activity_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Activity_Description" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Work_Center" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Person_Rep" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Planned_StartDate" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Planned_CompletionDate" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Actual_StartDate" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Actual_Completiondate" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_On" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_On" Type="DateTime" Precision="3" />
+    <Property Name="Maker_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Partlist_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Apg_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Apg_Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Part_Engg_Code" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Project_Commercial_Data">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Project_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Project_Clasificaton" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Project_Sector" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Project_Currency" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LDfor_Delyed_Deliveryfor_Equp" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LDfor_Delyed_Deliveryfor_Draw" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Mile_Stone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Per_Payments" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TriggeringPoint" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_On" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_On" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Project_Master">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Project_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Project_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Project_Client" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Project_DeliveryDate" Type="DateTime" Precision="3" />
+    <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Project_Description" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Project_Equp_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Maker_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Project_Master_Child">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Project_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Project_Equp_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_On" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_On" Type="DateTime" Precision="3" />
+    <Property Name="Maker_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="APG_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="APG_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Full_Project_Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Project_Structure">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Project_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Parent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_On" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_On" Type="DateTime" Precision="3" />
+    <Property Name="Main" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Project_Structure_Main">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Project_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Maker_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Maker_Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="APG_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="APG_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_On" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_On" Type="DateTime" Precision="3" />
+    <Property Name="Full_Project_Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Project_Technical_Data">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Project_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Special_Mtrl_Requ_Chk" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Special_Mtrl_Requ" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Warranty_Period" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CE_Marking" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Insp_TPIA" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="ASME_Code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="National_Board_Reg" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="InspectonBy_CIB" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Comp_With_Loc_Reg" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Comp_With_Doc_To_Gost" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="QAP_Approve" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Insp_by_Auth_Insp" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Insp_by_Accep_Client" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Concession_Requeist_Client" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_On" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_On" Type="DateTime" Precision="3" />
+    <Property Name="ProjectCodeConstruction" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Project_Technical_Data_Child">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Project_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Mile_Stone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Per_Payments" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TriggeringPoint" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_On" Type="DateTime" Precision="3" />
+    <Property Name="Modigied_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_On" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Project_Version_History">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Project_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Version_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Version_Date" Type="DateTime" Precision="3" />
+    <Property Name="Version_Change" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="DCN_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Reviewed_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Approved_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SubAssembly_Master">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Sub_Assembly_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Sub_Assembly_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_On" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_On" Type="DateTime" Precision="3" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="User_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Temptable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Maker_No" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Project_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="no" Type="Int32" />
+  </EntityType>
+  <EntityType Name="UOM_Master">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UOM_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UOM_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_By" Type="DateTime" Precision="3" />
+    <Property Name="Modified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_By" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AppUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="User_Login">
+    <Key>
+      <PropertyRef Name="LoginId" />
+    </Key>
+    <Property Name="LoginId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Int32" />
+    <Property Name="LastLogin" Type="DateTime" Precision="0" />
+    <Property Name="userid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="UsersInRole">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <Property Name="roleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="createdbyid" Type="Int32" />
+    <Property Name="createdbyname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Variant_Master">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Variant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Variant_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Sub_Assembly_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_On" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modifed_On" Type="DateTime" Precision="3" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="WorkCenter">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Work_Center_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Work_Center" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Created_On" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="modified_On" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="Thermal_PMSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Activity_Child" EntityType="Self.Activity_Child" />
+    <EntitySet Name="Activity_Master" EntityType="Self.Activity_Master" />
+    <EntitySet Name="APG_Master" EntityType="Self.APG_Master" />
+    <EntitySet Name="Customer_Master" EntityType="Self.Customer_Master" />
+    <EntitySet Name="Group_Master" EntityType="Self.Group_Master" />
+    <EntitySet Name="Item_RM_Codes" EntityType="Self.Item_RM_Codes" />
+    <EntitySet Name="Item_RM_Master" EntityType="Self.Item_RM_Master" />
+    <EntitySet Name="Maker_Master" EntityType="Self.Maker_Master" />
+    <EntitySet Name="Material_Grades" EntityType="Self.Material_Grades" />
+    <EntitySet Name="Part_List" EntityType="Self.Part_List" />
+    <EntitySet Name="Part_List_Item" EntityType="Self.Part_List_Item" />
+    <EntitySet Name="Project_ActivityChart" EntityType="Self.Project_ActivityChart" />
+    <EntitySet Name="Project_Commercial_Data" EntityType="Self.Project_Commercial_Data" />
+    <EntitySet Name="Project_Master" EntityType="Self.Project_Master" />
+    <EntitySet Name="Project_Master_Child" EntityType="Self.Project_Master_Child" />
+    <EntitySet Name="Project_Structure" EntityType="Self.Project_Structure" />
+    <EntitySet Name="Project_Structure_Main" EntityType="Self.Project_Structure_Main" />
+    <EntitySet Name="Project_Technical_Data" EntityType="Self.Project_Technical_Data" />
+    <EntitySet Name="Project_Technical_Data_Child" EntityType="Self.Project_Technical_Data_Child" />
+    <EntitySet Name="Project_Version_History" EntityType="Self.Project_Version_History" />
+    <EntitySet Name="Roles" EntityType="Self.Role" />
+    <EntitySet Name="SubAssembly_Master" EntityType="Self.SubAssembly_Master" />
+    <EntitySet Name="Tables" EntityType="Self.Table" />
+    <EntitySet Name="Temptables" EntityType="Self.Temptable" />
+    <EntitySet Name="UOM_Master" EntityType="Self.UOM_Master" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="User_Login" EntityType="Self.User_Login" />
+    <EntitySet Name="UsersInRoles" EntityType="Self.UsersInRole" />
+    <EntitySet Name="Variant_Master" EntityType="Self.Variant_Master" />
+    <EntitySet Name="WorkCenters" EntityType="Self.WorkCenter" />
+  </EntityContainer>
+</Schema>

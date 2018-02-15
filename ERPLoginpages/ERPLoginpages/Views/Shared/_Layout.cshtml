@@ -1,0 +1,107 @@
+﻿
+@model ERPLoginpages.Models.User_Login
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - ERP Thermal</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+
+<body>
+
+    <div id="Wrapper" class="col-lg-4">
+        <ul class="sidebar-menu">
+
+
+            <li class="treeview">
+                <a href="#"><i class="fa fa-link"></i> <span>Masters</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="/Clients">Clients</a></li>
+                    <li><a href="/Divisions">Divisions</a></li>
+                    <li><a href="/Manufacturers">Manufacturers</a></li>
+                    <li><a href="/incoTerms">incoTerms</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="Home/Admin"><i class="fa fa-link"></i> <span>Transactions</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="/Clients">Clients</a></li>
+                    <li><a href="/Divisions">Divisions</a></li>
+                    <li><a href="/Manufacturers">Manufacturers</a></li>
+                    <li><a href="/incoTerms">incoTerms</a></li>
+
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="Home/Admin"><i class="fa fa-link"></i> <span>Reports</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="/Clients">Clients</a></li>
+                    <li><a href="/Divisions">Divisions</a></li>
+                    <li><a href="/Manufacturers">Manufacturers</a></li>
+                    <li><a href="/incoTerms">incoTerms</a></li>
+
+                </ul>
+            </li>
+        </ul>
+        </div>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="~/Content/TS.jpg" class="img-center" height="50" width="50" />
+
+
+            </div>
+
+            <div class="navbar-collapse collapse">
+
+                <ul class="nav navbar-nav">
+                    @Html.ActionLink("Thermal Systems", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+
+    @RenderBody()
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Thermal Application</p>
+    </footer>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+﻿
+@{
+    Layout = null;
+
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/Style.css/style.css" rel="stylesheet" />
+    <title>Login</title>
+</head>
+<body>
+    <div class="container" >
+        <img src="~/Content/TS.jpg" />
+        <section @*class="Login_content"*@ >
+            <form method="post" action="/Admin/Admin">
+        <h2>Login</h2>
+        <div>
+            <label for="username">User Name</label>
+            <input type="text" class="form-control" name="username" placeholder="username" required="" />
+
+        </div>
+        <br />
+        <div>
+            <label for="Password">Password</label>
+            <input type="password" class="form-control" name="Password" placeholder="Password" required="" />
+
+        </div>
+        <br />
+               
+        <div>
+            <input type="submit" name="Login" class="btn btn-default Submit" value="Log in" />
+        </div>
+        <div class="clearfix">
+
+        </div>
+        <div class="seperator">
+
+        </div>
+
+       
+            </form>
+            </section>
+    </div>
+
+</body>
+</html>

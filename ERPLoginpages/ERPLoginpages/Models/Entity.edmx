@@ -1,0 +1,1584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Thermal_PMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Activity_Child">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Activity_Code" Type="varchar" MaxLength="50" />
+          <Property Name="Activity_Res_Id" Type="varchar" MaxLength="50" />
+          <Property Name="Act_Res_Skill_Level" Type="varchar" MaxLength="50" />
+          <Property Name="Act_Noof_Res" Type="varchar" MaxLength="50" />
+          <Property Name="Act_Res_Cost" Type="varchar" MaxLength="50" />
+          <Property Name="CompID" Type="varchar" MaxLength="50" />
+          <Property Name="Created_By" Type="varchar" MaxLength="50" />
+          <Property Name="Created_On" Type="datetime" />
+          <Property Name="Modified_On" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_By" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Activity_Master">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Activity_Code" Type="varchar" MaxLength="50" />
+          <Property Name="Activity_Description" Type="varchar" MaxLength="150" />
+          <Property Name="Activity_Group" Type="varchar" MaxLength="50" />
+          <Property Name="Activity_Document" Type="varchar" MaxLength="50" />
+          <Property Name="Activity_Type" Type="varchar" MaxLength="50" />
+          <Property Name="Activity_Predessor" Type="varchar" MaxLength="50" />
+          <Property Name="Activity_Exe_Time" Type="varchar" MaxLength="50" />
+          <Property Name="CompID" Type="varchar" MaxLength="50" />
+          <Property Name="Created_By" Type="varchar" MaxLength="50" />
+          <Property Name="Created_On" Type="datetime" />
+          <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_on" Type="datetime" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="APG_Master">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="APG_No" Type="varchar" MaxLength="50" />
+          <Property Name="APG_Description" Type="varchar" MaxLength="100" />
+          <Property Name="APG_ApplicableTo" Type="varchar(max)" />
+          <Property Name="CompID" Type="varchar" MaxLength="50" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Created_By" Type="varchar" MaxLength="50" />
+          <Property Name="Created_On" Type="datetime" />
+          <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_On" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Thermal_PMS.dbo.CompInfo' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="CompInfo">
+          <Property Name="Comp ID" Type="varchar" MaxLength="10" />
+          <Property Name="Company Name" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="100" />
+          <Property Name="City" Type="varchar" MaxLength="20" />
+          <Property Name="Phone" Type="varchar" MaxLength="20" />
+          <Property Name="Status" Type="varchar" MaxLength="10" />
+          <Property Name="Logo" Type="image" />
+        </EntityType>-->
+        <EntityType Name="Customer_Master">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Customer_Id" Type="varchar" MaxLength="50" />
+          <Property Name="Customer_Name" Type="varchar" MaxLength="150" />
+          <Property Name="CompID" Type="varchar" MaxLength="50" />
+          <Property Name="Created_By" Type="varchar" MaxLength="50" />
+          <Property Name="Created_On" Type="datetime" />
+          <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_On" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Group_Master">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Group_Id" Type="varchar" MaxLength="50" />
+          <Property Name="Group_Name" Type="varchar" MaxLength="50" />
+          <Property Name="CompID" Type="varchar" MaxLength="50" />
+          <Property Name="Created" Type="varchar" MaxLength="50" />
+          <Property Name="Created_By" Type="datetime" />
+          <Property Name="Modified" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_By" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Item_RM_Codes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Item_Spec" Type="varchar" MaxLength="50" />
+          <Property Name="Item_Dia" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Item_WT" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Item_SchNo" Type="varchar" MaxLength="15" />
+          <Property Name="Item_UWt" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Item_Description" Type="varchar" MaxLength="100" />
+          <Property Name="Item_Code" Type="varchar" MaxLength="25" />
+          <Property Name="Item_LongText" Type="varchar(max)" />
+          <Property Name="CompID" Type="varchar" MaxLength="50" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Part_List_No" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Item_RM_Master">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Item_Type" Type="varchar" MaxLength="50" />
+          <Property Name="Item_Group" Type="varchar" MaxLength="50" />
+          <Property Name="Item_Pur_UOM" Type="varchar" MaxLength="50" />
+          <Property Name="Item_Iss_UOM" Type="varchar" MaxLength="50" />
+          <Property Name="Item_Spec" Type="varchar" MaxLength="50" />
+          <Property Name="Item_PTS" Type="varchar" MaxLength="50" />
+          <Property Name="Item_BOM_Req" Type="varchar" MaxLength="50" />
+          <Property Name="Item_Critical_Item" Type="varchar" MaxLength="50" />
+          <Property Name="Item_ShelfLife" Type="varchar" MaxLength="50" />
+          <Property Name="CompID" Type="varchar" MaxLength="50" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Maker_Master">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Maker_No" Type="varchar" MaxLength="50" />
+          <Property Name="Maker_Description" Type="varchar" MaxLength="50" />
+          <Property Name="CompID" Type="varchar" MaxLength="50" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Material_Grades">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Material_Group" Type="varchar" MaxLength="50" />
+          <Property Name="Material_Grad" Type="varchar" MaxLength="50" />
+          <Property Name="Material_Color" Type="varchar" MaxLength="20" />
+          <Property Name="Material_Density" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="CompID" Type="varchar" MaxLength="50" />
+          <Property Name="Spec_Code" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Part_List">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Part_List_No" Type="varchar" MaxLength="50" />
+          <Property Name="Part_List_Name" Type="varchar" MaxLength="50" />
+          <Property Name="CompID" Type="varchar" MaxLength="50" />
+          <Property Name="Created_By" Type="varchar" MaxLength="50" />
+          <Property Name="Created_On" Type="datetime" />
+          <Property Name="Modified_by" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_On" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Part_List_Item">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Project_Code" Type="varchar" MaxLength="50" />
+          <Property Name="Maker_No" Type="varchar" MaxLength="50" />
+          <Property Name="Apg_No" Type="varchar" MaxLength="50" />
+          <Property Name="Apg_Name" Type="varchar" MaxLength="100" />
+          <Property Name="Partlist_No" Type="varchar" MaxLength="50" />
+          <Property Name="Part_Group" Type="varchar" MaxLength="50" />
+          <Property Name="Part_Sl_No" Type="varchar" MaxLength="50" />
+          <Property Name="Part_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Part_Desription" Type="varchar(max)" />
+          <Property Name="Part_variant" Type="varchar" MaxLength="50" />
+          <Property Name="Part_UOM" Type="varchar" MaxLength="50" />
+          <Property Name="Part_Spec_Id" Type="varchar" MaxLength="50" />
+          <Property Name="Part_Rm_Type" Type="varchar" MaxLength="50" />
+          <Property Name="Part_Rm_WThick" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Part_Rm_Density" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Part_Mtc_Cert" Type="varchar" MaxLength="5" />
+          <Property Name="Part_IBR_Cert" Type="varchar" MaxLength="5" />
+          <Property Name="Part_EN_Cert" Type="varchar" MaxLength="5" />
+          <Property Name="Part_RM_Code" Type="varchar" MaxLength="50" />
+          <Property Name="Part_Dia" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Part_Wt" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Part_Length" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Part_W2" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Part_Fg_wt" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Part_Rm_Wt" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Part_D_Wt" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Part_Engg_Code" Type="varchar" MaxLength="50" />
+          <Property Name="CompId" Type="varchar" MaxLength="50" />
+          <Property Name="Version_No" Type="varchar" MaxLength="50" />
+          <Property Name="Version_Date" Type="datetime" />
+          <Property Name="Version_Change" Type="varchar" MaxLength="150" />
+          <Property Name="Created" Type="varchar" MaxLength="50" />
+          <Property Name="Creted_By" Type="datetime" />
+          <Property Name="Modified" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_By" Type="datetime" />
+          <Property Name="Qty" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="OD" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Part_Equipment_Name" Type="varchar" MaxLength="100" />
+          <Property Name="Status" Type="varchar" MaxLength="50" />
+          <Property Name="Drawing_NO" Type="varchar" MaxLength="50" />
+          <Property Name="PTS_NO" Type="varchar" MaxLength="50" />
+          <Property Name="Main_Drwaing_No" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Project_ActivityChart">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="Project_Code" Type="varchar" MaxLength="50" />
+          <Property Name="Activity_Code" Type="varchar" MaxLength="50" />
+          <Property Name="Activity_Description" Type="varchar" MaxLength="150" />
+          <Property Name="Work_Center" Type="varchar" MaxLength="50" />
+          <Property Name="Person_Rep" Type="varchar" MaxLength="100" />
+          <Property Name="Planned_StartDate" Type="varchar" MaxLength="100" />
+          <Property Name="Planned_CompletionDate" Type="varchar" MaxLength="100" />
+          <Property Name="Actual_StartDate" Type="varchar" MaxLength="100" />
+          <Property Name="Actual_Completiondate" Type="varchar" MaxLength="100" />
+          <Property Name="Status" Type="varchar" MaxLength="50" />
+          <Property Name="CompID" Type="varchar" MaxLength="50" />
+          <Property Name="Created_By" Type="varchar" MaxLength="50" />
+          <Property Name="Created_On" Type="datetime" />
+          <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_On" Type="datetime" />
+          <Property Name="Maker_No" Type="varchar" MaxLength="50" />
+          <Property Name="Partlist_No" Type="varchar" MaxLength="50" />
+          <Property Name="Apg_No" Type="varchar" MaxLength="50" />
+          <Property Name="Apg_Name" Type="varchar" MaxLength="150" />
+          <Property Name="Part_Engg_Code" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Project_Commercial_Data">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Project_Code" Type="varchar" MaxLength="50" />
+          <Property Name="Project_Clasificaton" Type="varchar" MaxLength="50" />
+          <Property Name="Project_Sector" Type="varchar" MaxLength="100" />
+          <Property Name="Project_Currency" Type="varchar" MaxLength="50" />
+          <Property Name="LDfor_Delyed_Deliveryfor_Equp" Type="varchar(max)" />
+          <Property Name="LDfor_Delyed_Deliveryfor_Draw" Type="varchar(max)" />
+          <Property Name="Mile_Stone" Type="varchar" MaxLength="50" />
+          <Property Name="Per_Payments" Type="varchar" MaxLength="50" />
+          <Property Name="TriggeringPoint" Type="varchar" MaxLength="50" />
+          <Property Name="CompID" Type="varchar" MaxLength="50" />
+          <Property Name="Created_By" Type="varchar" MaxLength="50" />
+          <Property Name="Created_On" Type="datetime" />
+          <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_On" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Project_Master">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Project_Code" Type="varchar" MaxLength="50" />
+          <Property Name="Project_Name" Type="varchar" MaxLength="250" />
+          <Property Name="Project_Client" Type="varchar" MaxLength="50" />
+          <Property Name="Project_DeliveryDate" Type="datetime" />
+          <Property Name="CompID" Type="varchar" MaxLength="50" />
+          <Property Name="Project_Description" Type="varchar" MaxLength="300" />
+          <Property Name="Project_Equp_Name" Type="varchar(max)" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Maker_No" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Project_Master_Child">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Project_Code" Type="varchar" MaxLength="50" />
+          <Property Name="Project_Equp_Name" Type="varchar(max)" />
+          <Property Name="CompID" Type="varchar" MaxLength="50" />
+          <Property Name="Created_By" Type="varchar" MaxLength="50" />
+          <Property Name="Created_On" Type="datetime" />
+          <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_On" Type="datetime" />
+          <Property Name="Maker_No" Type="varchar" MaxLength="50" />
+          <Property Name="APG_No" Type="varchar" MaxLength="50" />
+          <Property Name="APG_Name" Type="varchar(max)" />
+          <Property Name="Full_Project_Code" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Project_Structure">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Project_Code" Type="varchar" MaxLength="50" />
+          <Property Name="Name" Type="varchar(max)" />
+          <Property Name="Type" Type="varchar" MaxLength="50" />
+          <Property Name="Parent" Type="varchar(max)" />
+          <Property Name="CompID" Type="varchar" MaxLength="50" />
+          <Property Name="Created_By" Type="varchar" MaxLength="50" />
+          <Property Name="Created_On" Type="datetime" />
+          <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_On" Type="datetime" />
+          <Property Name="Main" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Project_Structure_Main">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Project_Code" Type="varchar" MaxLength="50" />
+          <Property Name="Maker_No" Type="varchar" MaxLength="50" />
+          <Property Name="Maker_Name" Type="varchar" MaxLength="150" />
+          <Property Name="APG_No" Type="varchar" MaxLength="50" />
+          <Property Name="APG_Name" Type="varchar" MaxLength="50" />
+          <Property Name="CompID" Type="varchar" MaxLength="50" />
+          <Property Name="Created_By" Type="varchar" MaxLength="50" />
+          <Property Name="Created_On" Type="datetime" />
+          <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_On" Type="datetime" />
+          <Property Name="Full_Project_Code" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Project_Technical_Data">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Project_Code" Type="varchar" MaxLength="50" />
+          <Property Name="Special_Mtrl_Requ_Chk" Type="varchar" MaxLength="5" />
+          <Property Name="Special_Mtrl_Requ" Type="varchar" MaxLength="50" />
+          <Property Name="Warranty_Period" Type="varchar" MaxLength="50" />
+          <Property Name="CE_Marking" Type="varchar" MaxLength="5" />
+          <Property Name="Insp_TPIA" Type="varchar" MaxLength="5" />
+          <Property Name="ASME_Code" Type="varchar" MaxLength="5" />
+          <Property Name="National_Board_Reg" Type="varchar" MaxLength="5" />
+          <Property Name="InspectonBy_CIB" Type="varchar" MaxLength="5" />
+          <Property Name="Comp_With_Loc_Reg" Type="varchar" MaxLength="5" />
+          <Property Name="Comp_With_Doc_To_Gost" Type="varchar" MaxLength="5" />
+          <Property Name="QAP_Approve" Type="varchar" MaxLength="5" />
+          <Property Name="Insp_by_Auth_Insp" Type="varchar" MaxLength="5" />
+          <Property Name="Insp_by_Accep_Client" Type="varchar" MaxLength="5" />
+          <Property Name="Concession_Requeist_Client" Type="varchar" MaxLength="5" />
+          <Property Name="CompID" Type="varchar" MaxLength="50" />
+          <Property Name="Created_By" Type="varchar" MaxLength="50" />
+          <Property Name="Created_On" Type="datetime" />
+          <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_On" Type="datetime" />
+          <Property Name="ProjectCodeConstruction" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Project_Technical_Data_Child">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Project_Code" Type="varchar" MaxLength="50" />
+          <Property Name="Mile_Stone" Type="varchar" MaxLength="50" />
+          <Property Name="Per_Payments" Type="varchar" MaxLength="100" />
+          <Property Name="TriggeringPoint" Type="varchar" MaxLength="50" />
+          <Property Name="CompID" Type="varchar" MaxLength="50" />
+          <Property Name="Created_By" Type="varchar" MaxLength="50" />
+          <Property Name="Created_On" Type="datetime" />
+          <Property Name="Modigied_By" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_On" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Project_Version_History">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="Project_Code" Type="varchar" MaxLength="50" />
+          <Property Name="Version_No" Type="varchar" MaxLength="50" />
+          <Property Name="Version_Date" Type="datetime" />
+          <Property Name="Version_Change" Type="varchar" MaxLength="250" />
+          <Property Name="DCN_No" Type="varchar" MaxLength="50" />
+          <Property Name="Created_By" Type="varchar" MaxLength="50" />
+          <Property Name="Reviewed_By" Type="varchar" MaxLength="50" />
+          <Property Name="Approved_By" Type="varchar" MaxLength="50" />
+          <Property Name="CompID" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SubAssembly_Master">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Sub_Assembly_ID" Type="varchar" MaxLength="10" />
+          <Property Name="Sub_Assembly_Name" Type="varchar" MaxLength="50" />
+          <Property Name="CompID" Type="varchar" MaxLength="50" />
+          <Property Name="Created_By" Type="varchar" MaxLength="50" />
+          <Property Name="Created_On" Type="datetime" />
+          <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_On" Type="datetime" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Table">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CompId" Type="varchar" MaxLength="50" />
+          <Property Name="Created_By" Type="varchar" MaxLength="50" />
+          <Property Name="Created_Date" Type="datetime" />
+          <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_Date" Type="datetime" />
+          <Property Name="User_Name" Type="varchar" MaxLength="100" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Temptable">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Maker_No" Type="varchar" MaxLength="250" />
+          <Property Name="Created_By" Type="varchar" MaxLength="50" />
+          <Property Name="CompID" Type="varchar" MaxLength="50" />
+          <Property Name="Project_Code" Type="varchar" MaxLength="50" />
+          <Property Name="no" Type="int" />
+        </EntityType>
+        <EntityType Name="UOM_Master">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UOM_Id" Type="varchar" MaxLength="50" />
+          <Property Name="UOM_Name" Type="varchar" MaxLength="50" />
+          <Property Name="CompId" Type="varchar" MaxLength="50" />
+          <Property Name="Created" Type="varchar" MaxLength="50" />
+          <Property Name="Created_By" Type="datetime" />
+          <Property Name="Modified" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_By" Type="datetime" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AppUserName" Type="varchar" MaxLength="50" />
+          <Property Name="FullName" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="User_Login">
+          <Key>
+            <PropertyRef Name="LoginId" />
+          </Key>
+          <Property Name="LoginId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="EmailId" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="IsActive" Type="int" />
+          <Property Name="LastLogin" Type="date" />
+          <Property Name="userid" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Thermal_PMS.dbo.User_setup' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="User_setup">
+          <Property Name="user_name" Type="nchar" MaxLength="10" />
+          <Property Name="password" Type="nchar" MaxLength="10" />
+          <Property Name="createdby" Type="nchar" MaxLength="10" />
+          <Property Name="createdon" Type="nchar" MaxLength="10" />
+          <Property Name="EmpName" Type="nchar" MaxLength="10" />
+          <Property Name="Department" Type="nchar" MaxLength="10" />
+          <Property Name="EMail" Type="nchar" MaxLength="10" />
+          <Property Name="CompanyAllowed" Type="nchar" MaxLength="10" />
+          <Property Name="ModuleAllowed" Type="nchar" MaxLength="10" />
+          <Property Name="UserRole" Type="nchar" MaxLength="10" />
+          <Property Name="Authorizations" Type="nchar" MaxLength="10" />
+        </EntityType>-->
+        <EntityType Name="UsersInRole">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="int" Nullable="false" />
+          <Property Name="roleName" Type="varchar" MaxLength="50" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="createdbyid" Type="int" />
+          <Property Name="createdbyname" Type="varchar" MaxLength="50" />
+          <Property Name="createdDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Variant_Master">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Variant_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Variant_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Sub_Assembly_Name" Type="varchar" MaxLength="50" />
+          <Property Name="CompID" Type="varchar" MaxLength="50" />
+          <Property Name="Created_By" Type="varchar" MaxLength="50" />
+          <Property Name="Created_On" Type="datetime" />
+          <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+          <Property Name="Modifed_On" Type="datetime" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WorkCenter">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Work_Center_id" Type="varchar" MaxLength="50" />
+          <Property Name="Work_Center" Type="varchar" MaxLength="100" />
+          <Property Name="CompID" Type="varchar" MaxLength="50" />
+          <Property Name="Created_By" Type="varchar" MaxLength="50" />
+          <Property Name="Created_On" Type="datetime" />
+          <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+          <Property Name="modified_On" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="Thermal_PMSModelStoreContainer">
+          <EntitySet Name="Activity_Child" EntityType="Self.Activity_Child" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Activity_Master" EntityType="Self.Activity_Master" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="APG_Master" EntityType="Self.APG_Master" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customer_Master" EntityType="Self.Customer_Master" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Group_Master" EntityType="Self.Group_Master" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Item_RM_Codes" EntityType="Self.Item_RM_Codes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Item_RM_Master" EntityType="Self.Item_RM_Master" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Maker_Master" EntityType="Self.Maker_Master" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Material_Grades" EntityType="Self.Material_Grades" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Part_List" EntityType="Self.Part_List" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Part_List_Item" EntityType="Self.Part_List_Item" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Project_ActivityChart" EntityType="Self.Project_ActivityChart" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Project_Commercial_Data" EntityType="Self.Project_Commercial_Data" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Project_Master" EntityType="Self.Project_Master" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Project_Master_Child" EntityType="Self.Project_Master_Child" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Project_Structure" EntityType="Self.Project_Structure" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Project_Structure_Main" EntityType="Self.Project_Structure_Main" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Project_Technical_Data" EntityType="Self.Project_Technical_Data" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Project_Technical_Data_Child" EntityType="Self.Project_Technical_Data_Child" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Project_Version_History" EntityType="Self.Project_Version_History" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SubAssembly_Master" EntityType="Self.SubAssembly_Master" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Temptable" EntityType="Self.Temptable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UOM_Master" EntityType="Self.UOM_Master" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User_Login" EntityType="Self.User_Login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UsersInRole" EntityType="Self.UsersInRole" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Variant_Master" EntityType="Self.Variant_Master" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WorkCenter" EntityType="Self.WorkCenter" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Thermal_PMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Activity_Child">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Activity_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Activity_Res_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Act_Res_Skill_Level" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Act_Noof_Res" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Act_Res_Cost" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_On" Type="DateTime" Precision="3" />
+          <Property Name="Modified_On" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modified_By" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Activity_Master">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Activity_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Activity_Description" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Activity_Group" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Activity_Document" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Activity_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Activity_Predessor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Activity_Exe_Time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_On" Type="DateTime" Precision="3" />
+          <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modified_on" Type="DateTime" Precision="3" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="APG_Master">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="APG_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="APG_Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="APG_ApplicableTo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_On" Type="DateTime" Precision="3" />
+          <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modified_On" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Customer_Master">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Customer_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Customer_Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_On" Type="DateTime" Precision="3" />
+          <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modified_On" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Group_Master">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Group_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Group_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_By" Type="DateTime" Precision="3" />
+          <Property Name="Modified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modified_By" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Item_RM_Codes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Item_Spec" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Item_Dia" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Item_WT" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Item_SchNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Item_UWt" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Item_Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Item_Code" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Item_LongText" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Part_List_No" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Item_RM_Master">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Item_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Item_Group" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Item_Pur_UOM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Item_Iss_UOM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Item_Spec" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Item_PTS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Item_BOM_Req" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Item_Critical_Item" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Item_ShelfLife" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Maker_Master">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Maker_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Maker_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Material_Grades">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Material_Group" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Material_Grad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Material_Color" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Material_Density" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Spec_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Part_List">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Part_List_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Part_List_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_On" Type="DateTime" Precision="3" />
+          <Property Name="Modified_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modified_On" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Part_List_Item">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Project_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Maker_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Apg_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Apg_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Partlist_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Part_Group" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Part_Sl_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Part_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Part_Desription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Part_variant" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Part_UOM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Part_Spec_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Part_Rm_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Part_Rm_WThick" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Part_Rm_Density" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="Part_Mtc_Cert" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Part_IBR_Cert" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Part_EN_Cert" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Part_RM_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Part_Dia" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Part_Wt" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Part_Length" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Part_W2" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Part_Fg_wt" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Part_Rm_Wt" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Part_D_Wt" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Part_Engg_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CompId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Version_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Version_Date" Type="DateTime" Precision="3" />
+          <Property Name="Version_Change" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Created" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Creted_By" Type="DateTime" Precision="3" />
+          <Property Name="Modified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modified_By" Type="DateTime" Precision="3" />
+          <Property Name="Qty" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="OD" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Part_Equipment_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Drawing_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PTS_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Main_Drwaing_No" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Project_ActivityChart">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Project_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Activity_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Activity_Description" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Work_Center" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Person_Rep" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Planned_StartDate" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Planned_CompletionDate" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Actual_StartDate" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Actual_Completiondate" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_On" Type="DateTime" Precision="3" />
+          <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modified_On" Type="DateTime" Precision="3" />
+          <Property Name="Maker_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Partlist_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Apg_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Apg_Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Part_Engg_Code" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Project_Commercial_Data">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Project_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Project_Clasificaton" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Project_Sector" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Project_Currency" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LDfor_Delyed_Deliveryfor_Equp" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="LDfor_Delyed_Deliveryfor_Draw" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Mile_Stone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Per_Payments" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TriggeringPoint" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_On" Type="DateTime" Precision="3" />
+          <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modified_On" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Project_Master">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Project_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Project_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Project_Client" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Project_DeliveryDate" Type="DateTime" Precision="3" />
+          <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Project_Description" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Project_Equp_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Maker_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Project_Master_Child">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Project_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Project_Equp_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_On" Type="DateTime" Precision="3" />
+          <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modified_On" Type="DateTime" Precision="3" />
+          <Property Name="Maker_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="APG_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="APG_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Full_Project_Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Project_Structure">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Project_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Parent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_On" Type="DateTime" Precision="3" />
+          <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modified_On" Type="DateTime" Precision="3" />
+          <Property Name="Main" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Project_Structure_Main">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Project_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Maker_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Maker_Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="APG_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="APG_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_On" Type="DateTime" Precision="3" />
+          <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modified_On" Type="DateTime" Precision="3" />
+          <Property Name="Full_Project_Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Project_Technical_Data">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Project_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Special_Mtrl_Requ_Chk" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Special_Mtrl_Requ" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Warranty_Period" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CE_Marking" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Insp_TPIA" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="ASME_Code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="National_Board_Reg" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="InspectonBy_CIB" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Comp_With_Loc_Reg" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Comp_With_Doc_To_Gost" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="QAP_Approve" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Insp_by_Auth_Insp" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Insp_by_Accep_Client" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Concession_Requeist_Client" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_On" Type="DateTime" Precision="3" />
+          <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modified_On" Type="DateTime" Precision="3" />
+          <Property Name="ProjectCodeConstruction" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Project_Technical_Data_Child">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Project_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Mile_Stone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Per_Payments" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TriggeringPoint" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_On" Type="DateTime" Precision="3" />
+          <Property Name="Modigied_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modified_On" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Project_Version_History">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Project_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Version_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Version_Date" Type="DateTime" Precision="3" />
+          <Property Name="Version_Change" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="DCN_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Reviewed_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Approved_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SubAssembly_Master">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Sub_Assembly_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Sub_Assembly_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_On" Type="DateTime" Precision="3" />
+          <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modified_On" Type="DateTime" Precision="3" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Table">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CompId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_Date" Type="DateTime" Precision="3" />
+          <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+          <Property Name="User_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Temptable">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Maker_No" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Project_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="no" Type="Int32" />
+        </EntityType>
+        <EntityType Name="UOM_Master">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UOM_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UOM_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CompId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_By" Type="DateTime" Precision="3" />
+          <Property Name="Modified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modified_By" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AppUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="User_Login">
+          <Key>
+            <PropertyRef Name="LoginId" />
+          </Key>
+          <Property Name="LoginId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsActive" Type="Int32" />
+          <Property Name="LastLogin" Type="DateTime" Precision="0" />
+          <Property Name="userid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UsersInRole">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="Int32" Nullable="false" />
+          <Property Name="roleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserId" Type="Int32" />
+          <Property Name="createdbyid" Type="Int32" />
+          <Property Name="createdbyname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="createdDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Variant_Master">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Variant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Variant_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Sub_Assembly_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_On" Type="DateTime" Precision="3" />
+          <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modifed_On" Type="DateTime" Precision="3" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="WorkCenter">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Work_Center_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Work_Center" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CompID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_On" Type="DateTime" Precision="3" />
+          <Property Name="Modified_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="modified_On" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="Thermal_PMSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Activity_Child" EntityType="Self.Activity_Child" />
+          <EntitySet Name="Activity_Master" EntityType="Self.Activity_Master" />
+          <EntitySet Name="APG_Master" EntityType="Self.APG_Master" />
+          <EntitySet Name="Customer_Master" EntityType="Self.Customer_Master" />
+          <EntitySet Name="Group_Master" EntityType="Self.Group_Master" />
+          <EntitySet Name="Item_RM_Codes" EntityType="Self.Item_RM_Codes" />
+          <EntitySet Name="Item_RM_Master" EntityType="Self.Item_RM_Master" />
+          <EntitySet Name="Maker_Master" EntityType="Self.Maker_Master" />
+          <EntitySet Name="Material_Grades" EntityType="Self.Material_Grades" />
+          <EntitySet Name="Part_List" EntityType="Self.Part_List" />
+          <EntitySet Name="Part_List_Item" EntityType="Self.Part_List_Item" />
+          <EntitySet Name="Project_ActivityChart" EntityType="Self.Project_ActivityChart" />
+          <EntitySet Name="Project_Commercial_Data" EntityType="Self.Project_Commercial_Data" />
+          <EntitySet Name="Project_Master" EntityType="Self.Project_Master" />
+          <EntitySet Name="Project_Master_Child" EntityType="Self.Project_Master_Child" />
+          <EntitySet Name="Project_Structure" EntityType="Self.Project_Structure" />
+          <EntitySet Name="Project_Structure_Main" EntityType="Self.Project_Structure_Main" />
+          <EntitySet Name="Project_Technical_Data" EntityType="Self.Project_Technical_Data" />
+          <EntitySet Name="Project_Technical_Data_Child" EntityType="Self.Project_Technical_Data_Child" />
+          <EntitySet Name="Project_Version_History" EntityType="Self.Project_Version_History" />
+          <EntitySet Name="Roles" EntityType="Self.Role" />
+          <EntitySet Name="SubAssembly_Master" EntityType="Self.SubAssembly_Master" />
+          <EntitySet Name="Tables" EntityType="Self.Table" />
+          <EntitySet Name="Temptables" EntityType="Self.Temptable" />
+          <EntitySet Name="UOM_Master" EntityType="Self.UOM_Master" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="User_Login" EntityType="Self.User_Login" />
+          <EntitySet Name="UsersInRoles" EntityType="Self.UsersInRole" />
+          <EntitySet Name="Variant_Master" EntityType="Self.Variant_Master" />
+          <EntitySet Name="WorkCenters" EntityType="Self.WorkCenter" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Thermal_PMSModelStoreContainer" CdmEntityContainer="Thermal_PMSEntities">
+          <EntitySetMapping Name="Activity_Child">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.Activity_Child">
+              <MappingFragment StoreEntitySet="Activity_Child">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Activity_Code" ColumnName="Activity_Code" />
+                <ScalarProperty Name="Activity_Res_Id" ColumnName="Activity_Res_Id" />
+                <ScalarProperty Name="Act_Res_Skill_Level" ColumnName="Act_Res_Skill_Level" />
+                <ScalarProperty Name="Act_Noof_Res" ColumnName="Act_Noof_Res" />
+                <ScalarProperty Name="Act_Res_Cost" ColumnName="Act_Res_Cost" />
+                <ScalarProperty Name="CompID" ColumnName="CompID" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+                <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Activity_Master">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.Activity_Master">
+              <MappingFragment StoreEntitySet="Activity_Master">
+                <ScalarProperty Name="Activity_Code" ColumnName="Activity_Code" />
+                <ScalarProperty Name="Activity_Description" ColumnName="Activity_Description" />
+                <ScalarProperty Name="Activity_Group" ColumnName="Activity_Group" />
+                <ScalarProperty Name="Activity_Document" ColumnName="Activity_Document" />
+                <ScalarProperty Name="Activity_Type" ColumnName="Activity_Type" />
+                <ScalarProperty Name="Activity_Predessor" ColumnName="Activity_Predessor" />
+                <ScalarProperty Name="Activity_Exe_Time" ColumnName="Activity_Exe_Time" />
+                <ScalarProperty Name="CompID" ColumnName="CompID" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Modified_on" ColumnName="Modified_on" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="APG_Master">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.APG_Master">
+              <MappingFragment StoreEntitySet="APG_Master">
+                <ScalarProperty Name="APG_No" ColumnName="APG_No" />
+                <ScalarProperty Name="APG_Description" ColumnName="APG_Description" />
+                <ScalarProperty Name="APG_ApplicableTo" ColumnName="APG_ApplicableTo" />
+                <ScalarProperty Name="CompID" ColumnName="CompID" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customer_Master">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.Customer_Master">
+              <MappingFragment StoreEntitySet="Customer_Master">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Customer_Id" ColumnName="Customer_Id" />
+                <ScalarProperty Name="Customer_Name" ColumnName="Customer_Name" />
+                <ScalarProperty Name="CompID" ColumnName="CompID" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Group_Master">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.Group_Master">
+              <MappingFragment StoreEntitySet="Group_Master">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Group_Id" ColumnName="Group_Id" />
+                <ScalarProperty Name="Group_Name" ColumnName="Group_Name" />
+                <ScalarProperty Name="CompID" ColumnName="CompID" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Item_RM_Codes">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.Item_RM_Codes">
+              <MappingFragment StoreEntitySet="Item_RM_Codes">
+                <ScalarProperty Name="Item_Spec" ColumnName="Item_Spec" />
+                <ScalarProperty Name="Item_Dia" ColumnName="Item_Dia" />
+                <ScalarProperty Name="Item_WT" ColumnName="Item_WT" />
+                <ScalarProperty Name="Item_SchNo" ColumnName="Item_SchNo" />
+                <ScalarProperty Name="Item_UWt" ColumnName="Item_UWt" />
+                <ScalarProperty Name="Item_Description" ColumnName="Item_Description" />
+                <ScalarProperty Name="Item_Code" ColumnName="Item_Code" />
+                <ScalarProperty Name="Item_LongText" ColumnName="Item_LongText" />
+                <ScalarProperty Name="CompID" ColumnName="CompID" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Part_List_No" ColumnName="Part_List_No" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Item_RM_Master">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.Item_RM_Master">
+              <MappingFragment StoreEntitySet="Item_RM_Master">
+                <ScalarProperty Name="Item_Type" ColumnName="Item_Type" />
+                <ScalarProperty Name="Item_Group" ColumnName="Item_Group" />
+                <ScalarProperty Name="Item_Pur_UOM" ColumnName="Item_Pur_UOM" />
+                <ScalarProperty Name="Item_Iss_UOM" ColumnName="Item_Iss_UOM" />
+                <ScalarProperty Name="Item_Spec" ColumnName="Item_Spec" />
+                <ScalarProperty Name="Item_PTS" ColumnName="Item_PTS" />
+                <ScalarProperty Name="Item_BOM_Req" ColumnName="Item_BOM_Req" />
+                <ScalarProperty Name="Item_Critical_Item" ColumnName="Item_Critical_Item" />
+                <ScalarProperty Name="Item_ShelfLife" ColumnName="Item_ShelfLife" />
+                <ScalarProperty Name="CompID" ColumnName="CompID" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Maker_Master">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.Maker_Master">
+              <MappingFragment StoreEntitySet="Maker_Master">
+                <ScalarProperty Name="Maker_No" ColumnName="Maker_No" />
+                <ScalarProperty Name="Maker_Description" ColumnName="Maker_Description" />
+                <ScalarProperty Name="CompID" ColumnName="CompID" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Material_Grades">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.Material_Grades">
+              <MappingFragment StoreEntitySet="Material_Grades">
+                <ScalarProperty Name="Material_Group" ColumnName="Material_Group" />
+                <ScalarProperty Name="Material_Grad" ColumnName="Material_Grad" />
+                <ScalarProperty Name="Material_Color" ColumnName="Material_Color" />
+                <ScalarProperty Name="Material_Density" ColumnName="Material_Density" />
+                <ScalarProperty Name="CompID" ColumnName="CompID" />
+                <ScalarProperty Name="Spec_Code" ColumnName="Spec_Code" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Part_List">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.Part_List">
+              <MappingFragment StoreEntitySet="Part_List">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Part_List_No" ColumnName="Part_List_No" />
+                <ScalarProperty Name="Part_List_Name" ColumnName="Part_List_Name" />
+                <ScalarProperty Name="CompID" ColumnName="CompID" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+                <ScalarProperty Name="Modified_by" ColumnName="Modified_by" />
+                <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Part_List_Item">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.Part_List_Item">
+              <MappingFragment StoreEntitySet="Part_List_Item">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Project_Code" ColumnName="Project_Code" />
+                <ScalarProperty Name="Maker_No" ColumnName="Maker_No" />
+                <ScalarProperty Name="Apg_No" ColumnName="Apg_No" />
+                <ScalarProperty Name="Apg_Name" ColumnName="Apg_Name" />
+                <ScalarProperty Name="Partlist_No" ColumnName="Partlist_No" />
+                <ScalarProperty Name="Part_Group" ColumnName="Part_Group" />
+                <ScalarProperty Name="Part_Sl_No" ColumnName="Part_Sl_No" />
+                <ScalarProperty Name="Part_Name" ColumnName="Part_Name" />
+                <ScalarProperty Name="Part_Desription" ColumnName="Part_Desription" />
+                <ScalarProperty Name="Part_variant" ColumnName="Part_variant" />
+                <ScalarProperty Name="Part_UOM" ColumnName="Part_UOM" />
+                <ScalarProperty Name="Part_Spec_Id" ColumnName="Part_Spec_Id" />
+                <ScalarProperty Name="Part_Rm_Type" ColumnName="Part_Rm_Type" />
+                <ScalarProperty Name="Part_Rm_WThick" ColumnName="Part_Rm_WThick" />
+                <ScalarProperty Name="Part_Rm_Density" ColumnName="Part_Rm_Density" />
+                <ScalarProperty Name="Part_Mtc_Cert" ColumnName="Part_Mtc_Cert" />
+                <ScalarProperty Name="Part_IBR_Cert" ColumnName="Part_IBR_Cert" />
+                <ScalarProperty Name="Part_EN_Cert" ColumnName="Part_EN_Cert" />
+                <ScalarProperty Name="Part_RM_Code" ColumnName="Part_RM_Code" />
+                <ScalarProperty Name="Part_Dia" ColumnName="Part_Dia" />
+                <ScalarProperty Name="Part_Wt" ColumnName="Part_Wt" />
+                <ScalarProperty Name="Part_Length" ColumnName="Part_Length" />
+                <ScalarProperty Name="Part_W2" ColumnName="Part_W2" />
+                <ScalarProperty Name="Part_Fg_wt" ColumnName="Part_Fg_wt" />
+                <ScalarProperty Name="Part_Rm_Wt" ColumnName="Part_Rm_Wt" />
+                <ScalarProperty Name="Part_D_Wt" ColumnName="Part_D_Wt" />
+                <ScalarProperty Name="Part_Engg_Code" ColumnName="Part_Engg_Code" />
+                <ScalarProperty Name="CompId" ColumnName="CompId" />
+                <ScalarProperty Name="Version_No" ColumnName="Version_No" />
+                <ScalarProperty Name="Version_Date" ColumnName="Version_Date" />
+                <ScalarProperty Name="Version_Change" ColumnName="Version_Change" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Creted_By" ColumnName="Creted_By" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="OD" ColumnName="OD" />
+                <ScalarProperty Name="Part_Equipment_Name" ColumnName="Part_Equipment_Name" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Drawing_NO" ColumnName="Drawing_NO" />
+                <ScalarProperty Name="PTS_NO" ColumnName="PTS_NO" />
+                <ScalarProperty Name="Main_Drwaing_No" ColumnName="Main_Drwaing_No" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Project_ActivityChart">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.Project_ActivityChart">
+              <MappingFragment StoreEntitySet="Project_ActivityChart">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Project_Code" ColumnName="Project_Code" />
+                <ScalarProperty Name="Activity_Code" ColumnName="Activity_Code" />
+                <ScalarProperty Name="Activity_Description" ColumnName="Activity_Description" />
+                <ScalarProperty Name="Work_Center" ColumnName="Work_Center" />
+                <ScalarProperty Name="Person_Rep" ColumnName="Person_Rep" />
+                <ScalarProperty Name="Planned_StartDate" ColumnName="Planned_StartDate" />
+                <ScalarProperty Name="Planned_CompletionDate" ColumnName="Planned_CompletionDate" />
+                <ScalarProperty Name="Actual_StartDate" ColumnName="Actual_StartDate" />
+                <ScalarProperty Name="Actual_Completiondate" ColumnName="Actual_Completiondate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CompID" ColumnName="CompID" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+                <ScalarProperty Name="Maker_No" ColumnName="Maker_No" />
+                <ScalarProperty Name="Partlist_No" ColumnName="Partlist_No" />
+                <ScalarProperty Name="Apg_No" ColumnName="Apg_No" />
+                <ScalarProperty Name="Apg_Name" ColumnName="Apg_Name" />
+                <ScalarProperty Name="Part_Engg_Code" ColumnName="Part_Engg_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Project_Commercial_Data">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.Project_Commercial_Data">
+              <MappingFragment StoreEntitySet="Project_Commercial_Data">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Project_Code" ColumnName="Project_Code" />
+                <ScalarProperty Name="Project_Clasificaton" ColumnName="Project_Clasificaton" />
+                <ScalarProperty Name="Project_Sector" ColumnName="Project_Sector" />
+                <ScalarProperty Name="Project_Currency" ColumnName="Project_Currency" />
+                <ScalarProperty Name="LDfor_Delyed_Deliveryfor_Equp" ColumnName="LDfor_Delyed_Deliveryfor_Equp" />
+                <ScalarProperty Name="LDfor_Delyed_Deliveryfor_Draw" ColumnName="LDfor_Delyed_Deliveryfor_Draw" />
+                <ScalarProperty Name="Mile_Stone" ColumnName="Mile_Stone" />
+                <ScalarProperty Name="Per_Payments" ColumnName="Per_Payments" />
+                <ScalarProperty Name="TriggeringPoint" ColumnName="TriggeringPoint" />
+                <ScalarProperty Name="CompID" ColumnName="CompID" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Project_Master">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.Project_Master">
+              <MappingFragment StoreEntitySet="Project_Master">
+                <ScalarProperty Name="Project_Code" ColumnName="Project_Code" />
+                <ScalarProperty Name="Project_Name" ColumnName="Project_Name" />
+                <ScalarProperty Name="Project_Client" ColumnName="Project_Client" />
+                <ScalarProperty Name="Project_DeliveryDate" ColumnName="Project_DeliveryDate" />
+                <ScalarProperty Name="CompID" ColumnName="CompID" />
+                <ScalarProperty Name="Project_Description" ColumnName="Project_Description" />
+                <ScalarProperty Name="Project_Equp_Name" ColumnName="Project_Equp_Name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Maker_No" ColumnName="Maker_No" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Project_Master_Child">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.Project_Master_Child">
+              <MappingFragment StoreEntitySet="Project_Master_Child">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Project_Code" ColumnName="Project_Code" />
+                <ScalarProperty Name="Project_Equp_Name" ColumnName="Project_Equp_Name" />
+                <ScalarProperty Name="CompID" ColumnName="CompID" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+                <ScalarProperty Name="Maker_No" ColumnName="Maker_No" />
+                <ScalarProperty Name="APG_No" ColumnName="APG_No" />
+                <ScalarProperty Name="APG_Name" ColumnName="APG_Name" />
+                <ScalarProperty Name="Full_Project_Code" ColumnName="Full_Project_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Project_Structure">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.Project_Structure">
+              <MappingFragment StoreEntitySet="Project_Structure">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Project_Code" ColumnName="Project_Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Parent" ColumnName="Parent" />
+                <ScalarProperty Name="CompID" ColumnName="CompID" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+                <ScalarProperty Name="Main" ColumnName="Main" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Project_Structure_Main">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.Project_Structure_Main">
+              <MappingFragment StoreEntitySet="Project_Structure_Main">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Project_Code" ColumnName="Project_Code" />
+                <ScalarProperty Name="Maker_No" ColumnName="Maker_No" />
+                <ScalarProperty Name="Maker_Name" ColumnName="Maker_Name" />
+                <ScalarProperty Name="APG_No" ColumnName="APG_No" />
+                <ScalarProperty Name="APG_Name" ColumnName="APG_Name" />
+                <ScalarProperty Name="CompID" ColumnName="CompID" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+                <ScalarProperty Name="Full_Project_Code" ColumnName="Full_Project_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Project_Technical_Data">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.Project_Technical_Data">
+              <MappingFragment StoreEntitySet="Project_Technical_Data">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Project_Code" ColumnName="Project_Code" />
+                <ScalarProperty Name="Special_Mtrl_Requ_Chk" ColumnName="Special_Mtrl_Requ_Chk" />
+                <ScalarProperty Name="Special_Mtrl_Requ" ColumnName="Special_Mtrl_Requ" />
+                <ScalarProperty Name="Warranty_Period" ColumnName="Warranty_Period" />
+                <ScalarProperty Name="CE_Marking" ColumnName="CE_Marking" />
+                <ScalarProperty Name="Insp_TPIA" ColumnName="Insp_TPIA" />
+                <ScalarProperty Name="ASME_Code" ColumnName="ASME_Code" />
+                <ScalarProperty Name="National_Board_Reg" ColumnName="National_Board_Reg" />
+                <ScalarProperty Name="InspectonBy_CIB" ColumnName="InspectonBy_CIB" />
+                <ScalarProperty Name="Comp_With_Loc_Reg" ColumnName="Comp_With_Loc_Reg" />
+                <ScalarProperty Name="Comp_With_Doc_To_Gost" ColumnName="Comp_With_Doc_To_Gost" />
+                <ScalarProperty Name="QAP_Approve" ColumnName="QAP_Approve" />
+                <ScalarProperty Name="Insp_by_Auth_Insp" ColumnName="Insp_by_Auth_Insp" />
+                <ScalarProperty Name="Insp_by_Accep_Client" ColumnName="Insp_by_Accep_Client" />
+                <ScalarProperty Name="Concession_Requeist_Client" ColumnName="Concession_Requeist_Client" />
+                <ScalarProperty Name="CompID" ColumnName="CompID" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+                <ScalarProperty Name="ProjectCodeConstruction" ColumnName="ProjectCodeConstruction" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Project_Technical_Data_Child">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.Project_Technical_Data_Child">
+              <MappingFragment StoreEntitySet="Project_Technical_Data_Child">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Project_Code" ColumnName="Project_Code" />
+                <ScalarProperty Name="Mile_Stone" ColumnName="Mile_Stone" />
+                <ScalarProperty Name="Per_Payments" ColumnName="Per_Payments" />
+                <ScalarProperty Name="TriggeringPoint" ColumnName="TriggeringPoint" />
+                <ScalarProperty Name="CompID" ColumnName="CompID" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+                <ScalarProperty Name="Modigied_By" ColumnName="Modigied_By" />
+                <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Project_Version_History">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.Project_Version_History">
+              <MappingFragment StoreEntitySet="Project_Version_History">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Project_Code" ColumnName="Project_Code" />
+                <ScalarProperty Name="Version_No" ColumnName="Version_No" />
+                <ScalarProperty Name="Version_Date" ColumnName="Version_Date" />
+                <ScalarProperty Name="Version_Change" ColumnName="Version_Change" />
+                <ScalarProperty Name="DCN_No" ColumnName="DCN_No" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Reviewed_By" ColumnName="Reviewed_By" />
+                <ScalarProperty Name="Approved_By" ColumnName="Approved_By" />
+                <ScalarProperty Name="CompID" ColumnName="CompID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.Role">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SubAssembly_Master">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.SubAssembly_Master">
+              <MappingFragment StoreEntitySet="SubAssembly_Master">
+                <ScalarProperty Name="Sub_Assembly_ID" ColumnName="Sub_Assembly_ID" />
+                <ScalarProperty Name="Sub_Assembly_Name" ColumnName="Sub_Assembly_Name" />
+                <ScalarProperty Name="CompID" ColumnName="CompID" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tables">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.Table">
+              <MappingFragment StoreEntitySet="Table">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="CompId" ColumnName="CompId" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+                <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Temptables">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.Temptable">
+              <MappingFragment StoreEntitySet="Temptable">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Maker_No" ColumnName="Maker_No" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="CompID" ColumnName="CompID" />
+                <ScalarProperty Name="Project_Code" ColumnName="Project_Code" />
+                <ScalarProperty Name="no" ColumnName="no" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UOM_Master">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.UOM_Master">
+              <MappingFragment StoreEntitySet="UOM_Master">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="UOM_Id" ColumnName="UOM_Id" />
+                <ScalarProperty Name="UOM_Name" ColumnName="UOM_Name" />
+                <ScalarProperty Name="CompId" ColumnName="CompId" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="AppUserName" ColumnName="AppUserName" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User_Login">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.User_Login">
+              <MappingFragment StoreEntitySet="User_Login">
+                <ScalarProperty Name="LoginId" ColumnName="LoginId" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+                <ScalarProperty Name="userid" ColumnName="userid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsersInRoles">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.UsersInRole">
+              <MappingFragment StoreEntitySet="UsersInRole">
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="roleName" ColumnName="roleName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="createdbyid" ColumnName="createdbyid" />
+                <ScalarProperty Name="createdbyname" ColumnName="createdbyname" />
+                <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Variant_Master">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.Variant_Master">
+              <MappingFragment StoreEntitySet="Variant_Master">
+                <ScalarProperty Name="Variant_ID" ColumnName="Variant_ID" />
+                <ScalarProperty Name="Variant_Name" ColumnName="Variant_Name" />
+                <ScalarProperty Name="Sub_Assembly_Name" ColumnName="Sub_Assembly_Name" />
+                <ScalarProperty Name="CompID" ColumnName="CompID" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Modifed_On" ColumnName="Modifed_On" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorkCenters">
+            <EntityTypeMapping TypeName="Thermal_PMSModel.WorkCenter">
+              <MappingFragment StoreEntitySet="WorkCenter">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Work_Center_id" ColumnName="Work_Center_id" />
+                <ScalarProperty Name="Work_Center" ColumnName="Work_Center" />
+                <ScalarProperty Name="CompID" ColumnName="CompID" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="modified_On" ColumnName="modified_On" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

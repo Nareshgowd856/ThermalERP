@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Thermal_PMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Activity_Child">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Activity_Code" Type="varchar" MaxLength="50" />
+    <Property Name="Activity_Res_Id" Type="varchar" MaxLength="50" />
+    <Property Name="Act_Res_Skill_Level" Type="varchar" MaxLength="50" />
+    <Property Name="Act_Noof_Res" Type="varchar" MaxLength="50" />
+    <Property Name="Act_Res_Cost" Type="varchar" MaxLength="50" />
+    <Property Name="CompID" Type="varchar" MaxLength="50" />
+    <Property Name="Created_By" Type="varchar" MaxLength="50" />
+    <Property Name="Created_On" Type="datetime" />
+    <Property Name="Modified_On" Type="varchar" MaxLength="50" />
+    <Property Name="Modified_By" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Activity_Master">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Activity_Code" Type="varchar" MaxLength="50" />
+    <Property Name="Activity_Description" Type="varchar" MaxLength="150" />
+    <Property Name="Activity_Group" Type="varchar" MaxLength="50" />
+    <Property Name="Activity_Document" Type="varchar" MaxLength="50" />
+    <Property Name="Activity_Type" Type="varchar" MaxLength="50" />
+    <Property Name="Activity_Predessor" Type="varchar" MaxLength="50" />
+    <Property Name="Activity_Exe_Time" Type="varchar" MaxLength="50" />
+    <Property Name="CompID" Type="varchar" MaxLength="50" />
+    <Property Name="Created_By" Type="varchar" MaxLength="50" />
+    <Property Name="Created_On" Type="datetime" />
+    <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+    <Property Name="Modified_on" Type="datetime" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="APG_Master">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="APG_No" Type="varchar" MaxLength="50" />
+    <Property Name="APG_Description" Type="varchar" MaxLength="100" />
+    <Property Name="APG_ApplicableTo" Type="varchar(max)" />
+    <Property Name="CompID" Type="varchar" MaxLength="50" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Created_By" Type="varchar" MaxLength="50" />
+    <Property Name="Created_On" Type="datetime" />
+    <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+    <Property Name="Modified_On" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Thermal_PMS.dbo.CompInfo' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="CompInfo">
+          <Property Name="Comp ID" Type="varchar" MaxLength="10" />
+          <Property Name="Company Name" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="100" />
+          <Property Name="City" Type="varchar" MaxLength="20" />
+          <Property Name="Phone" Type="varchar" MaxLength="20" />
+          <Property Name="Status" Type="varchar" MaxLength="10" />
+          <Property Name="Logo" Type="image" />
+        </EntityType>-->
+  <EntityType Name="Customer_Master">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Customer_Id" Type="varchar" MaxLength="50" />
+    <Property Name="Customer_Name" Type="varchar" MaxLength="150" />
+    <Property Name="CompID" Type="varchar" MaxLength="50" />
+    <Property Name="Created_By" Type="varchar" MaxLength="50" />
+    <Property Name="Created_On" Type="datetime" />
+    <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+    <Property Name="Modified_On" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Group_Master">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Group_Id" Type="varchar" MaxLength="50" />
+    <Property Name="Group_Name" Type="varchar" MaxLength="50" />
+    <Property Name="CompID" Type="varchar" MaxLength="50" />
+    <Property Name="Created" Type="varchar" MaxLength="50" />
+    <Property Name="Created_By" Type="datetime" />
+    <Property Name="Modified" Type="varchar" MaxLength="50" />
+    <Property Name="Modified_By" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Item_RM_Codes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Item_Spec" Type="varchar" MaxLength="50" />
+    <Property Name="Item_Dia" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Item_WT" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="Item_SchNo" Type="varchar" MaxLength="15" />
+    <Property Name="Item_UWt" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="Item_Description" Type="varchar" MaxLength="100" />
+    <Property Name="Item_Code" Type="varchar" MaxLength="25" />
+    <Property Name="Item_LongText" Type="varchar(max)" />
+    <Property Name="CompID" Type="varchar" MaxLength="50" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Part_List_No" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Item_RM_Master">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Item_Type" Type="varchar" MaxLength="50" />
+    <Property Name="Item_Group" Type="varchar" MaxLength="50" />
+    <Property Name="Item_Pur_UOM" Type="varchar" MaxLength="50" />
+    <Property Name="Item_Iss_UOM" Type="varchar" MaxLength="50" />
+    <Property Name="Item_Spec" Type="varchar" MaxLength="50" />
+    <Property Name="Item_PTS" Type="varchar" MaxLength="50" />
+    <Property Name="Item_BOM_Req" Type="varchar" MaxLength="50" />
+    <Property Name="Item_Critical_Item" Type="varchar" MaxLength="50" />
+    <Property Name="Item_ShelfLife" Type="varchar" MaxLength="50" />
+    <Property Name="CompID" Type="varchar" MaxLength="50" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Maker_Master">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Maker_No" Type="varchar" MaxLength="50" />
+    <Property Name="Maker_Description" Type="varchar" MaxLength="50" />
+    <Property Name="CompID" Type="varchar" MaxLength="50" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Material_Grades">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Material_Group" Type="varchar" MaxLength="50" />
+    <Property Name="Material_Grad" Type="varchar" MaxLength="50" />
+    <Property Name="Material_Color" Type="varchar" MaxLength="20" />
+    <Property Name="Material_Density" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="CompID" Type="varchar" MaxLength="50" />
+    <Property Name="Spec_Code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Part_List">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Part_List_No" Type="varchar" MaxLength="50" />
+    <Property Name="Part_List_Name" Type="varchar" MaxLength="50" />
+    <Property Name="CompID" Type="varchar" MaxLength="50" />
+    <Property Name="Created_By" Type="varchar" MaxLength="50" />
+    <Property Name="Created_On" Type="datetime" />
+    <Property Name="Modified_by" Type="varchar" MaxLength="50" />
+    <Property Name="Modified_On" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Part_List_Item">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Project_Code" Type="varchar" MaxLength="50" />
+    <Property Name="Maker_No" Type="varchar" MaxLength="50" />
+    <Property Name="Apg_No" Type="varchar" MaxLength="50" />
+    <Property Name="Apg_Name" Type="varchar" MaxLength="100" />
+    <Property Name="Partlist_No" Type="varchar" MaxLength="50" />
+    <Property Name="Part_Group" Type="varchar" MaxLength="50" />
+    <Property Name="Part_Sl_No" Type="varchar" MaxLength="50" />
+    <Property Name="Part_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Part_Desription" Type="varchar(max)" />
+    <Property Name="Part_variant" Type="varchar" MaxLength="50" />
+    <Property Name="Part_UOM" Type="varchar" MaxLength="50" />
+    <Property Name="Part_Spec_Id" Type="varchar" MaxLength="50" />
+    <Property Name="Part_Rm_Type" Type="varchar" MaxLength="50" />
+    <Property Name="Part_Rm_WThick" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="Part_Rm_Density" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="Part_Mtc_Cert" Type="varchar" MaxLength="5" />
+    <Property Name="Part_IBR_Cert" Type="varchar" MaxLength="5" />
+    <Property Name="Part_EN_Cert" Type="varchar" MaxLength="5" />
+    <Property Name="Part_RM_Code" Type="varchar" MaxLength="50" />
+    <Property Name="Part_Dia" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="Part_Wt" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="Part_Length" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="Part_W2" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="Part_Fg_wt" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="Part_Rm_Wt" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="Part_D_Wt" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="Part_Engg_Code" Type="varchar" MaxLength="50" />
+    <Property Name="CompId" Type="varchar" MaxLength="50" />
+    <Property Name="Version_No" Type="varchar" MaxLength="50" />
+    <Property Name="Version_Date" Type="datetime" />
+    <Property Name="Version_Change" Type="varchar" MaxLength="150" />
+    <Property Name="Created" Type="varchar" MaxLength="50" />
+    <Property Name="Creted_By" Type="datetime" />
+    <Property Name="Modified" Type="varchar" MaxLength="50" />
+    <Property Name="Modified_By" Type="datetime" />
+    <Property Name="Qty" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="OD" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="Part_Equipment_Name" Type="varchar" MaxLength="100" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="Drawing_NO" Type="varchar" MaxLength="50" />
+    <Property Name="PTS_NO" Type="varchar" MaxLength="50" />
+    <Property Name="Main_Drwaing_No" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Project_ActivityChart">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Project_Code" Type="varchar" MaxLength="50" />
+    <Property Name="Activity_Code" Type="varchar" MaxLength="50" />
+    <Property Name="Activity_Description" Type="varchar" MaxLength="150" />
+    <Property Name="Work_Center" Type="varchar" MaxLength="50" />
+    <Property Name="Person_Rep" Type="varchar" MaxLength="100" />
+    <Property Name="Planned_StartDate" Type="varchar" MaxLength="100" />
+    <Property Name="Planned_CompletionDate" Type="varchar" MaxLength="100" />
+    <Property Name="Actual_StartDate" Type="varchar" MaxLength="100" />
+    <Property Name="Actual_Completiondate" Type="varchar" MaxLength="100" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="CompID" Type="varchar" MaxLength="50" />
+    <Property Name="Created_By" Type="varchar" MaxLength="50" />
+    <Property Name="Created_On" Type="datetime" />
+    <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+    <Property Name="Modified_On" Type="datetime" />
+    <Property Name="Maker_No" Type="varchar" MaxLength="50" />
+    <Property Name="Partlist_No" Type="varchar" MaxLength="50" />
+    <Property Name="Apg_No" Type="varchar" MaxLength="50" />
+    <Property Name="Apg_Name" Type="varchar" MaxLength="150" />
+    <Property Name="Part_Engg_Code" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Project_Commercial_Data">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Project_Code" Type="varchar" MaxLength="50" />
+    <Property Name="Project_Clasificaton" Type="varchar" MaxLength="50" />
+    <Property Name="Project_Sector" Type="varchar" MaxLength="100" />
+    <Property Name="Project_Currency" Type="varchar" MaxLength="50" />
+    <Property Name="LDfor_Delyed_Deliveryfor_Equp" Type="varchar(max)" />
+    <Property Name="LDfor_Delyed_Deliveryfor_Draw" Type="varchar(max)" />
+    <Property Name="Mile_Stone" Type="varchar" MaxLength="50" />
+    <Property Name="Per_Payments" Type="varchar" MaxLength="50" />
+    <Property Name="TriggeringPoint" Type="varchar" MaxLength="50" />
+    <Property Name="CompID" Type="varchar" MaxLength="50" />
+    <Property Name="Created_By" Type="varchar" MaxLength="50" />
+    <Property Name="Created_On" Type="datetime" />
+    <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+    <Property Name="Modified_On" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Project_Master">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Project_Code" Type="varchar" MaxLength="50" />
+    <Property Name="Project_Name" Type="varchar" MaxLength="250" />
+    <Property Name="Project_Client" Type="varchar" MaxLength="50" />
+    <Property Name="Project_DeliveryDate" Type="datetime" />
+    <Property Name="CompID" Type="varchar" MaxLength="50" />
+    <Property Name="Project_Description" Type="varchar" MaxLength="300" />
+    <Property Name="Project_Equp_Name" Type="varchar(max)" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Maker_No" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Project_Master_Child">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Project_Code" Type="varchar" MaxLength="50" />
+    <Property Name="Project_Equp_Name" Type="varchar(max)" />
+    <Property Name="CompID" Type="varchar" MaxLength="50" />
+    <Property Name="Created_By" Type="varchar" MaxLength="50" />
+    <Property Name="Created_On" Type="datetime" />
+    <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+    <Property Name="Modified_On" Type="datetime" />
+    <Property Name="Maker_No" Type="varchar" MaxLength="50" />
+    <Property Name="APG_No" Type="varchar" MaxLength="50" />
+    <Property Name="APG_Name" Type="varchar(max)" />
+    <Property Name="Full_Project_Code" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Project_Structure">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Project_Code" Type="varchar" MaxLength="50" />
+    <Property Name="Name" Type="varchar(max)" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Parent" Type="varchar(max)" />
+    <Property Name="CompID" Type="varchar" MaxLength="50" />
+    <Property Name="Created_By" Type="varchar" MaxLength="50" />
+    <Property Name="Created_On" Type="datetime" />
+    <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+    <Property Name="Modified_On" Type="datetime" />
+    <Property Name="Main" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Project_Structure_Main">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Project_Code" Type="varchar" MaxLength="50" />
+    <Property Name="Maker_No" Type="varchar" MaxLength="50" />
+    <Property Name="Maker_Name" Type="varchar" MaxLength="150" />
+    <Property Name="APG_No" Type="varchar" MaxLength="50" />
+    <Property Name="APG_Name" Type="varchar" MaxLength="50" />
+    <Property Name="CompID" Type="varchar" MaxLength="50" />
+    <Property Name="Created_By" Type="varchar" MaxLength="50" />
+    <Property Name="Created_On" Type="datetime" />
+    <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+    <Property Name="Modified_On" Type="datetime" />
+    <Property Name="Full_Project_Code" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Project_Technical_Data">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Project_Code" Type="varchar" MaxLength="50" />
+    <Property Name="Special_Mtrl_Requ_Chk" Type="varchar" MaxLength="5" />
+    <Property Name="Special_Mtrl_Requ" Type="varchar" MaxLength="50" />
+    <Property Name="Warranty_Period" Type="varchar" MaxLength="50" />
+    <Property Name="CE_Marking" Type="varchar" MaxLength="5" />
+    <Property Name="Insp_TPIA" Type="varchar" MaxLength="5" />
+    <Property Name="ASME_Code" Type="varchar" MaxLength="5" />
+    <Property Name="National_Board_Reg" Type="varchar" MaxLength="5" />
+    <Property Name="InspectonBy_CIB" Type="varchar" MaxLength="5" />
+    <Property Name="Comp_With_Loc_Reg" Type="varchar" MaxLength="5" />
+    <Property Name="Comp_With_Doc_To_Gost" Type="varchar" MaxLength="5" />
+    <Property Name="QAP_Approve" Type="varchar" MaxLength="5" />
+    <Property Name="Insp_by_Auth_Insp" Type="varchar" MaxLength="5" />
+    <Property Name="Insp_by_Accep_Client" Type="varchar" MaxLength="5" />
+    <Property Name="Concession_Requeist_Client" Type="varchar" MaxLength="5" />
+    <Property Name="CompID" Type="varchar" MaxLength="50" />
+    <Property Name="Created_By" Type="varchar" MaxLength="50" />
+    <Property Name="Created_On" Type="datetime" />
+    <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+    <Property Name="Modified_On" Type="datetime" />
+    <Property Name="ProjectCodeConstruction" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Project_Technical_Data_Child">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Project_Code" Type="varchar" MaxLength="50" />
+    <Property Name="Mile_Stone" Type="varchar" MaxLength="50" />
+    <Property Name="Per_Payments" Type="varchar" MaxLength="100" />
+    <Property Name="TriggeringPoint" Type="varchar" MaxLength="50" />
+    <Property Name="CompID" Type="varchar" MaxLength="50" />
+    <Property Name="Created_By" Type="varchar" MaxLength="50" />
+    <Property Name="Created_On" Type="datetime" />
+    <Property Name="Modigied_By" Type="varchar" MaxLength="50" />
+    <Property Name="Modified_On" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Project_Version_History">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Project_Code" Type="varchar" MaxLength="50" />
+    <Property Name="Version_No" Type="varchar" MaxLength="50" />
+    <Property Name="Version_Date" Type="datetime" />
+    <Property Name="Version_Change" Type="varchar" MaxLength="250" />
+    <Property Name="DCN_No" Type="varchar" MaxLength="50" />
+    <Property Name="Created_By" Type="varchar" MaxLength="50" />
+    <Property Name="Reviewed_By" Type="varchar" MaxLength="50" />
+    <Property Name="Approved_By" Type="varchar" MaxLength="50" />
+    <Property Name="CompID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SubAssembly_Master">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Sub_Assembly_ID" Type="varchar" MaxLength="10" />
+    <Property Name="Sub_Assembly_Name" Type="varchar" MaxLength="50" />
+    <Property Name="CompID" Type="varchar" MaxLength="50" />
+    <Property Name="Created_By" Type="varchar" MaxLength="50" />
+    <Property Name="Created_On" Type="datetime" />
+    <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+    <Property Name="Modified_On" Type="datetime" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompId" Type="varchar" MaxLength="50" />
+    <Property Name="Created_By" Type="varchar" MaxLength="50" />
+    <Property Name="Created_Date" Type="datetime" />
+    <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+    <Property Name="Modified_Date" Type="datetime" />
+    <Property Name="User_Name" Type="varchar" MaxLength="100" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Temptable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Maker_No" Type="varchar" MaxLength="250" />
+    <Property Name="Created_By" Type="varchar" MaxLength="50" />
+    <Property Name="CompID" Type="varchar" MaxLength="50" />
+    <Property Name="Project_Code" Type="varchar" MaxLength="50" />
+    <Property Name="no" Type="int" />
+  </EntityType>
+  <EntityType Name="UOM_Master">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UOM_Id" Type="varchar" MaxLength="50" />
+    <Property Name="UOM_Name" Type="varchar" MaxLength="50" />
+    <Property Name="CompId" Type="varchar" MaxLength="50" />
+    <Property Name="Created" Type="varchar" MaxLength="50" />
+    <Property Name="Created_By" Type="datetime" />
+    <Property Name="Modified" Type="varchar" MaxLength="50" />
+    <Property Name="Modified_By" Type="datetime" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AppUserName" Type="varchar" MaxLength="50" />
+    <Property Name="FullName" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="User_Login">
+    <Key>
+      <PropertyRef Name="LoginId" />
+    </Key>
+    <Property Name="LoginId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmailId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="IsActive" Type="int" />
+    <Property Name="LastLogin" Type="date" />
+    <Property Name="userid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Thermal_PMS.dbo.User_setup' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="User_setup">
+          <Property Name="user_name" Type="nchar" MaxLength="10" />
+          <Property Name="password" Type="nchar" MaxLength="10" />
+          <Property Name="createdby" Type="nchar" MaxLength="10" />
+          <Property Name="createdon" Type="nchar" MaxLength="10" />
+          <Property Name="EmpName" Type="nchar" MaxLength="10" />
+          <Property Name="Department" Type="nchar" MaxLength="10" />
+          <Property Name="EMail" Type="nchar" MaxLength="10" />
+          <Property Name="CompanyAllowed" Type="nchar" MaxLength="10" />
+          <Property Name="ModuleAllowed" Type="nchar" MaxLength="10" />
+          <Property Name="UserRole" Type="nchar" MaxLength="10" />
+          <Property Name="Authorizations" Type="nchar" MaxLength="10" />
+        </EntityType>-->
+  <EntityType Name="UsersInRole">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" Nullable="false" />
+    <Property Name="roleName" Type="varchar" MaxLength="50" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="createdbyid" Type="int" />
+    <Property Name="createdbyname" Type="varchar" MaxLength="50" />
+    <Property Name="createdDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Variant_Master">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Variant_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Variant_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Sub_Assembly_Name" Type="varchar" MaxLength="50" />
+    <Property Name="CompID" Type="varchar" MaxLength="50" />
+    <Property Name="Created_By" Type="varchar" MaxLength="50" />
+    <Property Name="Created_On" Type="datetime" />
+    <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+    <Property Name="Modifed_On" Type="datetime" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkCenter">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Work_Center_id" Type="varchar" MaxLength="50" />
+    <Property Name="Work_Center" Type="varchar" MaxLength="100" />
+    <Property Name="CompID" Type="varchar" MaxLength="50" />
+    <Property Name="Created_By" Type="varchar" MaxLength="50" />
+    <Property Name="Created_On" Type="datetime" />
+    <Property Name="Modified_By" Type="varchar" MaxLength="50" />
+    <Property Name="modified_On" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="Thermal_PMSModelStoreContainer">
+    <EntitySet Name="Activity_Child" EntityType="Self.Activity_Child" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Activity_Master" EntityType="Self.Activity_Master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="APG_Master" EntityType="Self.APG_Master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer_Master" EntityType="Self.Customer_Master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Group_Master" EntityType="Self.Group_Master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Item_RM_Codes" EntityType="Self.Item_RM_Codes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Item_RM_Master" EntityType="Self.Item_RM_Master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Maker_Master" EntityType="Self.Maker_Master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Material_Grades" EntityType="Self.Material_Grades" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Part_List" EntityType="Self.Part_List" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Part_List_Item" EntityType="Self.Part_List_Item" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Project_ActivityChart" EntityType="Self.Project_ActivityChart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Project_Commercial_Data" EntityType="Self.Project_Commercial_Data" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Project_Master" EntityType="Self.Project_Master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Project_Master_Child" EntityType="Self.Project_Master_Child" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Project_Structure" EntityType="Self.Project_Structure" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Project_Structure_Main" EntityType="Self.Project_Structure_Main" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Project_Technical_Data" EntityType="Self.Project_Technical_Data" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Project_Technical_Data_Child" EntityType="Self.Project_Technical_Data_Child" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Project_Version_History" EntityType="Self.Project_Version_History" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubAssembly_Master" EntityType="Self.SubAssembly_Master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Temptable" EntityType="Self.Temptable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UOM_Master" EntityType="Self.UOM_Master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_Login" EntityType="Self.User_Login" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UsersInRole" EntityType="Self.UsersInRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Variant_Master" EntityType="Self.Variant_Master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkCenter" EntityType="Self.WorkCenter" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

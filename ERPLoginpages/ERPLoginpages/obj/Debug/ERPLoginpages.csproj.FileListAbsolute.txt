@@ -1,0 +1,106 @@
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\obj\Debug\ERPLoginpages.csproj.CoreCompileInputs.cache
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\ApplicationInsights.config
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\ERPLoginpages.dll.config
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\ERPLoginpages.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\ERPLoginpages.pdb
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\Antlr3.Runtime.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\EntityFramework.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\EntityFramework.SqlServer.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\Microsoft.AI.Web.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\Microsoft.ApplicationInsights.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\Newtonsoft.Json.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\Owin.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\System.Net.Http.Formatting.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\System.Web.Helpers.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\System.Web.Http.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\System.Web.Mvc.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\System.Web.Optimization.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\System.Web.Razor.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\System.Web.WebPages.Deployment.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\System.Web.WebPages.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\System.Web.WebPages.Razor.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\WebGrease.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\EntityFramework.xml
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\EntityFramework.SqlServer.xml
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\System.Net.Http.Formatting.xml
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\System.Web.Http.xml
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\System.Web.Helpers.xml
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\System.Web.Mvc.xml
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\System.Web.Optimization.xml
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\System.Web.Razor.xml
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\System.Web.WebPages.xml
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\System.Web.WebPages.Deployment.xml
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\System.Web.WebPages.Razor.xml
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\Antlr3.Runtime.pdb
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\Newtonsoft.Json.xml
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\Microsoft.ApplicationInsights.xml
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\bin\Microsoft.AI.Web.xml
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\obj\Debug\ERPLoginpages.csprojResolveAssemblyReference.cache
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\obj\Debug\ERPLoginpages.dll
+C:\Users\project\source\repos\ERPLoginpages\ERPLoginpages\obj\Debug\ERPLoginpages.pdb
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\ApplicationInsights.config
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\ERPLoginpages.dll.config
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\ERPLoginpages.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\ERPLoginpages.pdb
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\Antlr3.Runtime.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\EntityFramework.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\EntityFramework.SqlServer.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\Microsoft.AI.Agent.Intercept.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\Microsoft.AI.DependencyCollector.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\Microsoft.AI.PerfCounterCollector.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\Microsoft.AI.ServerTelemetryChannel.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\Microsoft.AI.Web.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\Microsoft.AI.WindowsServer.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\Microsoft.ApplicationInsights.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\Microsoft.AspNet.Identity.Core.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\Microsoft.Web.Infrastructure.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\Newtonsoft.Json.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\Owin.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\System.Net.Http.Formatting.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\System.Web.Helpers.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\System.Web.Http.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\System.Web.Mvc.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\System.Web.Optimization.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\System.Web.Razor.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\System.Web.WebPages.Deployment.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\System.Web.WebPages.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\System.Web.WebPages.Razor.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\WebGrease.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\EntityFramework.xml
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\EntityFramework.SqlServer.xml
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\Microsoft.AspNet.Identity.Core.xml
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\System.Net.Http.Formatting.xml
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\System.Web.Http.xml
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\System.Web.Helpers.xml
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\System.Web.Mvc.xml
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\System.Web.Optimization.xml
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\System.Web.Razor.xml
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\System.Web.WebPages.xml
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\System.Web.WebPages.Deployment.xml
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\System.Web.WebPages.Razor.xml
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\Antlr3.Runtime.pdb
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\Newtonsoft.Json.xml
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\Microsoft.ApplicationInsights.xml
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\Microsoft.AI.DependencyCollector.xml
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\Microsoft.AI.ServerTelemetryChannel.xml
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\Microsoft.AI.WindowsServer.xml
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\bin\Microsoft.AI.Web.xml
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\obj\Debug\ERPLoginpages.csprojResolveAssemblyReference.cache
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\obj\Debug\ERPLoginpages.csproj.CoreCompileInputs.cache
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\obj\Debug\ERPLoginpages.dll
+\\192.168.0.28\laksana project\Naresh\ERPLoginpages\ERPLoginpages\obj\Debug\ERPLoginpages.pdb
